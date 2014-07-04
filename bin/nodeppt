@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var join = path.join;
+
+
+var root = join(__dirname, '../');
+var nodePPT = require(join(root, './lib/nodePPT'));
+
+
+var opts = {
+    '-v': '--version',
+    '-p': '--port',
+    '-d': '--dir',
+    '-f': '--file',
+    '-o': '--output',
+    '-a': '--all',
+    '-h': '--help',
+    '-H': '--host',
+    '-c': '--controller'
+};
+
+var argv = parseArgs(process.argv);
+
+var command = argv.slice(2, 3).toString();
+
+if (typeof nodePPT[command] === 'function') {
+    nodePPT.cwd = process.cwd();
+    var args = argv.slice(3);
+    if (args.length === 1 && args[0] === '--help') {
+        //命令行帮助
+        return nodePPT.help(command);
+    }
+    nodePPT[command](args);
+} else {
+    nodePPT.help();
+}
+
+function parseArgs(args) {
+    return args.map(function(v) {
+        if (v in opts) {
+            return opts[v];
+        }
+        return v;
+    });
+}
