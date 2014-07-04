@@ -73,7 +73,6 @@ files: /js/demo.js,/css/demo.css
 
 * 创建新项目 {:&.build}
 * 管理你的项目的依赖关系
-* 运行测试
 * 运行一个REPL（你不需要再关心如何将依赖加入classpath)
 * 编译Java源码（如果有的话）
 * 运行项目（如果项目是一个app的话）
