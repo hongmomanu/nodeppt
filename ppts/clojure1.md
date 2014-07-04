@@ -79,6 +79,47 @@ files: /js/demo.js,/css/demo.css
 * 为项目产生一个Maven风格的pom文件
 * 部署，编译和打包项目
 * 发布类库到Maven仓库，例如Clojars  
+
+
+
+[slide]
+
+## Leiningen简单使用例子
+---
+
+* 创建新项目 {:&.build}
+
+    ```bash
+
+		 lein new luminus mytestapp
+		 
+	```
+
+* 运行一个REPL
+    ```bash
+   
+   		 lein repl
+   		 
+   	```
+
+
+* 运行项目
+    ```bash
+
+		 lein ring server-headless
+		 
+	```
+
+* 部署编译并打包项目
+    ```bash
+
+		 lein ring uberjar   //一个独立运行的jar包
+		 
+		 lein ring uberwar   //可发布在任何java容器下的war包 ，tomcat jetty weblogic等
+		 
+	```
+  
+
     
 
 [slide]
