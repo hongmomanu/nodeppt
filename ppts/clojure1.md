@@ -68,7 +68,7 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
-## clojure特性
+## Leiningen特性
 ---
 
 * 创建新项目 {:&.build}
