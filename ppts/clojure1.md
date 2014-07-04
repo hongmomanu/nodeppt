@@ -119,6 +119,14 @@ files: /js/demo.js,/css/demo.css
 		 
 	```
   
+[slide]
+## 开发工具idea介绍
+---
+
+* 如果你精通eclipse，netbean甚至其它编辑器，请坚持你的选择。 {:&.build}
+
+* 如果你没有找到一个满意的idea，可以选择[IntelIdea下载]（http://www.jetbrains.com/idea/download/）
+
 
     
 
