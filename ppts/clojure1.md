@@ -125,9 +125,9 @@ files: /js/demo.js,/css/demo.css
 ## 开发工具idea介绍
 ---
 
-* 如果你精通eclipse，netbean甚至其它编辑器，请坚持你的选择。 {:&.build}
+* idea是一个和 eclipse，netbean等集成环境类似的工具，只是性能更好一点。 {:&.build}
 
-* 如果你没有找到一个满意的idea，可以选择[IntelIdea下载](http://www.jetbrains.com/idea/download/)
+* idea下载地址，可以选择[IntelIdea下载](http://www.jetbrains.com/idea/download/)
 
     
 
