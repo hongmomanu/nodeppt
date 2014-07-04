@@ -96,14 +96,15 @@ files: /js/demo.js,/css/demo.css
 	```
 
 * 运行一个REPL
+    
     ```bash
    
    		 lein repl
    		 
    	```
 
-
 * 运行项目
+
     ```bash
 
 		 lein ring server-headless
@@ -111,6 +112,7 @@ files: /js/demo.js,/css/demo.css
 	```
 
 * 部署编译并打包项目
+    
     ```bash
 
 		 lein ring uberjar   //一个独立运行的jar包
@@ -127,18 +129,8 @@ files: /js/demo.js,/css/demo.css
 
 * 如果你没有找到一个满意的idea，可以选择[IntelIdea下载]（http://www.jetbrains.com/idea/download/）
 
-
     
 
-[slide]
-
-# 封面样式2 {:&.flexbox.vleft}
-## 左对齐
-
-[slide style="background-image:url('/img/bg1.png')"]
-
-# 背景图片 {:&.flexbox.vleft}
-## 使用方法：&#91;slide style="background-image:url('/img/bg1.png')"&#93;
 
 [slide]
 ## 使用.class/#id/自定义属性样式
