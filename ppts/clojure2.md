@@ -978,7 +978,7 @@ files: /js/demo.js,/css/demo.css
        
         ```clojure
                 user=> (dissoc {:name "jack" :sex "man"} :sex )
-                {:name "hellojack"}
+                {:name "jack"}
                 
          ```          
  
