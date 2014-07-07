@@ -692,6 +692,27 @@ files: /js/demo.js,/css/demo.css
                 
          ```          
  
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* 创建（三）  {:&.build}
+		
+    * 其它比较少用的创建函数 print-str、println-str、pr-str、prn-str、with-out-str 
+        ```clojure
+                user=> (print-str "abc" 234)
+                "abc 234"
+                user=> (println-str "abc" 234)
+                "abc 234\n"
+                user=> (pr-str "abc" 234)
+                "\"abc\" 234"
+                user=> (prn-str "abc" 234)
+                "\"abc\" 234\n"
+                user=> (with-out-str "abc" 234)
+                ""
+                
+         ```          
+ 
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
