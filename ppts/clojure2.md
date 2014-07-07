@@ -814,20 +814,160 @@ files: /js/demo.js,/css/demo.css
                 false
          ```          
  
+ 
+ 
 [slide style="background-image:url('/img/bg.jpg	')"]   
-## 字符串
+## 关键字
 ----    
-* string操作(七)   {:&.build}
+* 创建   {:&.build}
 		
-    * 字符检查函数(char?)接受一个参数，如果是字符类型返回true，否则返回false   
+    * Keyword： 关键字是一个内部字符串; 两个同样的关键字指向同一个对象; 通常被用来作为map的key。  
         ```clojure
-                user=> (char? "abc")
+                user=> (keyword "foo")
+                :foo
+                user=> (keyword "user" "foo")
+                :user/foo
+                user=> (keyword nil)
+                nil
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 关键字
+----    
+* 用法   {:&.build}
+		
+    * name： name函数接受一个参数，如果该参数为字符串，则直接返回该参数。如果不是字符串，则返回名称值。代码如下：   
+        ```clojure
+                user=> (name :foo)
+                "foo"
+                user=> (name "name")
+                "name"
+                user=> (name [1 2 3])
+                ClassCastException clojure.lang.PersistentVector cannot be cast to clojure.lang.Named 
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 关键字
+----    
+* 检查   {:&.build}
+		
+    * keyword?用于检查指定的参数是否为关键字、或者是符号，是则返回true，否则返回false。   
+        ```clojure
+                user=> (keyword? [1 2 3])
                 false
-                user=> (char? \a)
+                user=> (keyword? :x)
                 true
-                user=> (char? 1)
+                user=> (keyword? "x")
                 false
-                user=> (char? nil)
-                false
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 序列
+----    
+* 生成一个序列   {:&.build}
+		
+    *    
+        ```clojure
+                user=> ([1 2 3])
+                [1 2 3]
+                user=> (conj [1 2] 3 4)
+                [1 2 3 4]
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 序列
+----    
+* 序列函数介绍（一）   {:&.build}
+		
+       
+        ```clojure
+                user=> (first [1 2 3])
+                1
+                user=> (last [1 2 3 4])
+                4
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 序列
+----    
+* 序列函数介绍（二）   {:&.build}
+		
+       
+        ```clojure
+                user=> (nth [ 1 3] 0)
+                1
+                user=> (second [1 2 3 4])
+                2
+                
+         ```          
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 序列
+----    
+* 序列函数介绍（三）   {:&.build}
+		
+       
+        ```clojure
+                user=> (take 2 [ 1 2 3 4] )
+                (1 2)
+                user=> (drop 2 [1 2 3 4])
+                (3 4)
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 序列
+----    
+* 序列函数介绍（四）   {:&.build}
+		
+       
+        ```clojure
+                user=> (concat [1 2 ] [3 4])
+                (1 2 3 4)
+                user=> (range 0 10)
+                (0 1 2 3 4 5 6 7 8 9)
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## Maps （key-value键值对）
+----    
+* 创建   {:&.build}
+		
+       
+        ```clojure
+                user=> {:name "jack"}
+                {:name "jack"}
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## Maps （key-value键值对）
+----    
+* 读取   {:&.build}
+		
+       
+        ```clojure
+                user=> (:name  {:name "jack"})
+                "jack"
+                user=> (get {:name "jack"} :name)
+                "jack"
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## Maps （key-value键值对）
+----    
+* 修改   {:&.build}
+       
+        ```clojure
+                user=> (assoc {:name "jack"} :name "hellojack" )
+                {:name "hellojack"}
+                user=> (assoc {:name "jack"} :sex "man" )
+                {:sex "man", :name "jack"}
+                
          ```          
  
