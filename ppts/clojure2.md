@@ -23,7 +23,6 @@ files: /js/demo.js,/css/demo.css
                  
          ```
         
-        
     
    
 [slide style="background-image:url('/img/bg.jpg	')"]
