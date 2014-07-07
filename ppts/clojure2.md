@@ -626,6 +626,18 @@ files: /js/demo.js,/css/demo.css
                 100000000000
                 user=> (bigdec 100000000000)
                 100000000000M
+                
+                
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 强制转换（三） {:&.build}
+		
+    * 强制转换支持以下类型： {:&.build}
+           
+         ```clojure
                 user=> (num 22.22)
                 22.22
                 user=> (num "22.22")
