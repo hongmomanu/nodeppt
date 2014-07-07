@@ -743,13 +743,25 @@ files: /js/demo.js,/css/demo.css
                 "thomer"
                 user=> (subs "ithomer" 1 3)
                 "th"
+                
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* string操作（三）   {:&.build}
+		
+    * subs函数（续）：  
+        ```clojure
                 user=> (subs "ithomer" 1 (count "ithomer"))
                 "thomer"
                 user=> (subs "ithomer" 1 20)
                 java.lang.StringIndexOutOfBoundsException: String index out of range: 20 (NO_SOURCE_FILE:0)
                 user=> (subs "ithomer")
                 java.lang.IllegalArgumentException: Wrong number of args (1) passed to: core$subs (NO_SOURCE_FILE:0)
-                
+         
          ```          
  
 
