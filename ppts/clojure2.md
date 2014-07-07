@@ -184,6 +184,182 @@ files: /js/demo.js,/css/demo.css
                 1
                  
          ```           
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+                  
+* 算术运算(八） {:&.build}
+		
+    * 取余rem： 余数函数 (rem) 接受两个数值类型参数并返回第一个参数除以第二个参数的余数   {:&.build}
+           
+         ```clojure
+        
+                user=> (rem 10 9)
+                1
+                user=> (rem 2 2)
+                0
+                user=> (rem 10 -3)
+                1
+                user=> (rem -10 3)
+                -1
+                user=> (rem -10 -3)
+                -1
+                 
+         ```      [slide style="background-image:url('/img/bg.jpg	')"]         
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(九） {:&.build}
+		
+    * 取模mod： 取模函数（mod）接收两个数值类型参数，如果两个参数为正整数或者同为负整数，则与rem函数返回值一致；如果其中有一个负数，则结果为rem返回值与第二个参数之和。   {:&.build}
+           
+         ```clojure
+        
+                user=> (mod 10 9)
+                1
+                user=> (mod 2 2)
+                0
+                user=> (mod 10 -3)
+                -2
+                user=> (mod -10 3)
+                2
+                user=> (mod -10 -3)
+                -1
+                user=> (mod 10 3)
+                1
+                 
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(十） {:&.build}
+		
+    * 增量函数inc： 函数 (inc) 接受一个数值类型参数并返回它的值加1。  {:&.build}
+           
+         ```clojure
+        
+                user=> (inc 1)  
+                2  
+                user=> (inc -1)  
+                0  
+                 
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(十一） {:&.build}
+		
+    * 减量函数 (dec)： 减量函数 (dec) 接受一个数值类型参数并返回它的值减1。   {:&.build}
+           
+         ```clojure
+        
+                user=> (dec 1)  
+                2  
+                user=> (dec -1)  
+                0  
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(十二） {:&.build}
+		
+    * 最大函数max： 最大数函数 (max) 接受任意数值类型的参数并返回最大的。  {:&.build}
+           
+         ```clojure
+        
+                user=> (max 1 3 6 2)  
+                6  
+                 
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(十三） {:&.build}
+		
+    * 最小函数min： 最小数函数 (min) 接受任意数值类型的参数并返回最小的。  {:&.build}
+           
+         ```clojure
+        
+                user=> (min 1 3 6 2)  
+                1  
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 算术运算(十四） {:&.build}
+		
+    * 精度函数with-precision： 精度函数with-precision针对大数据值操作的精度、小数点运算函数。  {:&.build}
+           
+         ```clojure
+        
+                user=> (with-precision 10 (/ 1 3))
+                0.3333333333M
+                user=> (with-precision 2 (/ 100M 3))
+                33M
+                user=> (with-precision 4 (/ 100M 3))
+                33.33M  
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+                  
+* 比较运算(一） {:&.build}
+		
+    * 值相等=： 值相等(=)函数接受若干参数，比较若干参数值是否相等。一个参数时，返回true。参数可以为nil。  {:&.build}
+           
+         ```clojure
+        
+                user=> (= 1)
+                true
+                user=> (= 1 1)
+                true
+                user=> (= 1 1.0)
+                true
+                user=> (= 1 2)
+                false
+                user=> (= 1 1 1)
+                true
+                user=> (= 1 1 2)
+                false
+                user=> (= nil nil)
+                true
+                 
+         ```           
+
+* 比较运算(二） {:&.build}
+		
+    * 值不同函数not=： 等价于(not (= obj1 obj2))   {:&.build}
+           
+         ```clojure
+        
+                user=> (not= 1 1)  
+                false  
+                user=> (not= 1 2)  
+                true  
+                user=> (not= 1 1.0)  
+                true  
+                user=> (not= true true)  
+                false  
+                user=> (not= true false)  
+                true  
+                user=> (not= true true false)  
+                true 
+                 
+         ```           
+
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
