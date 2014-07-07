@@ -879,23 +879,23 @@ files: /js/demo.js,/css/demo.css
 [slide style="background-image:url('/img/bg.jpg	')"]   
 ## 序列
 ----    
-* 序列函数介绍（一）   {:&.build}
+
+* 序列函数介绍(一)   {:&.build}
 		
-       
+    *    
         ```clojure
                 user=> (first [1 2 3])
                 1
                 user=> (last [1 2 3 4])
                 4
-                
          ```          
  
 [slide style="background-image:url('/img/bg.jpg	')"]   
 ## 序列
 ----    
 * 序列函数介绍（二）   {:&.build}
-		
-       
+           		
+    *    
         ```clojure
                 user=> (nth [ 1 3] 0)
                 1
@@ -908,7 +908,8 @@ files: /js/demo.js,/css/demo.css
 ## 序列
 ----    
 * 序列函数介绍（三）   {:&.build}
-		
+    
+    *		
        
         ```clojure
                 user=> (take 2 [ 1 2 3 4] )
@@ -923,7 +924,7 @@ files: /js/demo.js,/css/demo.css
 ----    
 * 序列函数介绍（四）   {:&.build}
 		
-       
+    *       
         ```clojure
                 user=> (concat [1 2 ] [3 4])
                 (1 2 3 4)
@@ -937,7 +938,7 @@ files: /js/demo.js,/css/demo.css
 ----    
 * 创建   {:&.build}
 		
-       
+    *       
         ```clojure
                 user=> {:name "jack"}
                 {:name "jack"}
@@ -949,7 +950,7 @@ files: /js/demo.js,/css/demo.css
 ----    
 * 读取   {:&.build}
 		
-       
+    *       
         ```clojure
                 user=> (:name  {:name "jack"})
                 "jack"
@@ -962,7 +963,7 @@ files: /js/demo.js,/css/demo.css
 ## Maps （key-value键值对）
 ----    
 * 修改新增字键值对   {:&.build}
-       
+    *       
         ```clojure
                 user=> (assoc {:name "jack"} :name "hellojack" )
                 {:name "hellojack"}
@@ -975,7 +976,7 @@ files: /js/demo.js,/css/demo.css
 ## Maps （key-value键值对）
 ----    
 * 删除键值对   {:&.build}
-       
+    *       
         ```clojure
                 user=> (dissoc {:name "jack" :sex "man"} :sex )
                 {:name "jack"}
