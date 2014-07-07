@@ -360,6 +360,16 @@ files: /js/demo.js,/css/demo.css
                  
          ```           
 
+* 比较运算(三） {:&.build}
+		
+    * 值不同函数not=： 等价于(not (= obj1 obj2))   {:&.build}
+           
+         ```clojure
+        
+                 
+                 
+         ```           
+
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
