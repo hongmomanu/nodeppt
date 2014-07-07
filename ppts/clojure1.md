@@ -10,10 +10,11 @@ files: /js/demo.js,/css/demo.css
 ----
 
 * Clojure 是一套现代的Lisp语言的动态语言版，它是一个函数式多用途的语言，其语法和其他的Lisp一样，都是建立在 S-expression 之上，即”全是括号，前缀表达式”的语言 {:&.build}
-
-* Clojure可以执行于Java虚拟机（JVM）引擎之上。
+ 
+* Clojure 语言在直觉和观感上比历史上的lisp更易于阅读. 你会发现虽然仍有各种括号,但是代码容易读和写。
 
 *  与其他Lisp一样，Clojure认为代码即数据。
+
    
 [slide style="background-image:url('/img/bg.jpg	')"]
 
@@ -122,7 +123,7 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
-## Leiningen简单使用例子
+## Leiningen简单使用例子(一)
 ---
 
 * 创建新项目 {:&.build}
@@ -140,6 +141,11 @@ files: /js/demo.js,/css/demo.css
    		 lein repl
    		 
    	```
+
+[slide]
+
+## Leiningen简单使用例子(二)
+---
 
 * 运行项目
 

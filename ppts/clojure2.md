@@ -647,7 +647,51 @@ files: /js/demo.js,/css/demo.css
                 user=> (rationalize 0.5)
                 1/2
                 
-         ```           
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* 创建（一）  {:&.build}
+		
+    * 函数str： 函数 (str) 接受任意数量的参数。如果参数不是字符串则将其转换为字符串，返回创建的新字符串。如果没有参数或为nil，则返回空字符串""： {:&.build}
+           
+         ```clojure
+                user=> (str 1)
+                "1"
+                user=> (str -2.5)
+                "-2.5"
+                user=> (str "a")
+                "a"
+                user=> (str "abc" 123)
+                "abc123"
+                user=> (str)
+                ""
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* 创建（二）  {:&.build}
+		
+    * ```clojure
+                user=> (str '(1 2 3))
+                "(1 2 3)"
+                user=> (str nil)
+                ""
+                user=> (str null)
+                java.lang.Exception: Unable to resolve symbol: null in this context (NO_SOURCE_FILE:149)
+                user=> (str "null")
+                "null"
+                user=> (str "abc " 123)
+                "abc 123"
+                user=> (str 123 345)
+                "123345"
+                
+         ```          
+ 
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
