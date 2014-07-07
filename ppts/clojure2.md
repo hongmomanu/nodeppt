@@ -797,4 +797,37 @@ files: /js/demo.js,/css/demo.css
                 user=> (string? nil)
                 false
          ```          
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----    
+* string操作(六)   {:&.build}
+		
+    * 字符检查函数(char?)接受一个参数，如果是字符类型返回true，否则返回false   
+        ```clojure
+                user=> (char? "abc")
+                false
+                user=> (char? \a)
+                true
+                user=> (char? 1)
+                false
+                user=> (char? nil)
+                false
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----    
+* string操作(七)   {:&.build}
+		
+    * 字符检查函数(char?)接受一个参数，如果是字符类型返回true，否则返回false   
+        ```clojure
+                user=> (char? "abc")
+                false
+                user=> (char? \a)
+                true
+                user=> (char? 1)
+                false
+                user=> (char? nil)
+                false
+         ```          
  
