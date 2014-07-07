@@ -205,7 +205,7 @@ files: /js/demo.js,/css/demo.css
                 user=> (rem -10 -3)
                 -1
                  
-         ```      [slide style="background-image:url('/img/bg.jpg	')"]         
+         ```          
 
 [slide style="background-image:url('/img/bg.jpg	')"]   
 ## 数值类型
@@ -586,6 +586,54 @@ files: /js/demo.js,/css/demo.css
               bigdec  Coerce to BigDecimal.   
               num  Coerce to Number.   
               rationalize  returns the rational value of num   
+                
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 强制转换（二） {:&.build}
+		
+    * 强制转换支持以下类型： {:&.build}
+           
+         ```clojure
+         
+              user=> (double 12)
+              12.0
+              user=> (short 10000)
+              10000
+              user=> (short 1000000000)
+              java.lang.IllegalArgumentException: Value out of range for short: 1000000000 (NO_SOURCE_FILE:0)
+              user=> (int 22.2)
+              22
+                 
+                
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 强制转换（三） {:&.build}
+		
+    * 强制转换支持以下类型： {:&.build}
+           
+         ```clojure
+                user=> (long 22.2)
+                22
+                user=> (float 22)
+                22.0
+                user=> (bigint 100000000000)
+                100000000000
+                user=> (bigdec 100000000000)
+                100000000000M
+                user=> (num 22.22)
+                22.22
+                user=> (num "22.22")
+                java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Number (NO_SOURCE_FILE:0)
+                user=> (rationalize 22.22)
+                1111/50
+                user=> (rationalize 0.5)
+                1/2
                 
          ```           
 
