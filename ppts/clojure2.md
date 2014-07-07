@@ -339,6 +339,10 @@ files: /js/demo.js,/css/demo.css
                  
          ```           
 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
 * 比较运算(二） {:&.build}
 		
     * 值不同函数not=： 等价于(not (= obj1 obj2))   {:&.build}
@@ -360,16 +364,192 @@ files: /js/demo.js,/css/demo.css
                  
          ```           
 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
 * 比较运算(三） {:&.build}
 		
-    * 值不同函数not=： 等价于(not (= obj1 obj2))   {:&.build}
+    * 小于 (<) ：小于函数 (<) 接受任意数值类型的参数，如果它们按升序排列返回true，否则返回false。   {:&.build}
            
          ```clojure
-        
-                 
+         
+              user=> (< 5 10)  
+              true  
+              user=> (< 5 10 9)  
+              false  
+              user=> (< 1)  
+              true 
                  
          ```           
 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 比较运算(四） {:&.build}
+		
+    * 大于 (>) ：大于函数 (>) 接受任意数值类型的参数，如果它们按降序排列返回true，否则返回false。    {:&.build}
+           
+         ```clojure
+         
+              user=> (> 5 2)
+              true
+              user=> (> 5 10)
+              false
+              user=> (> 5 10 9)
+              false
+              user=> (> 1)
+              true
+              user=> (> 0)
+              true
+              user=> (> -1)
+              true 
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 比较运算(五） {:&.build}
+		
+    * 大于等于 (>=) ：大于等于函数 (>=) 接受任意数值类型的参数，如果它们按降序排列或顺序相等返回true，否则返回false。     {:&.build}
+           
+         ```clojure
+         
+              user=> (>= 10 5 5)
+              true
+              user=> (>= 10 5 6)
+              false
+              user=> (>= 10 5 4)
+              true 
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 比较运算(六） {:&.build}
+		
+    * 小于等于 (<=) ：小于等于函数 (<=) 接受任意数值类型的参数，如果它们按升序排列或顺序相等返回true，否则返回false。     {:&.build}
+           
+         ```clojure
+         
+              user=> (<= 2 5 5)
+              true
+              user=> (<= 2 5 4)
+              false
+              user=> (<= 2 5 6)
+              true 
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(一） {:&.build}
+		
+    * 0检查zero?： 0检查函数 (zero?) 接受一个数值类型参数，如果是0返回true，否则返回false {:&.build}
+           
+         ```clojure
+         
+              user=> (zero? 0.0)
+              true
+              user=> (zero? 0)
+              true
+              user=> (zero? 1)
+              false
+              user=> (zero? 0.1)
+              false 
+                 
+         ```           
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(二） {:&.build}
+		
+    * 正数检查pos?： 正数检查函数 (pos?) 接受一个数值类型参数，如果是大于0返回true，否则返回false  {:&.build}
+           
+         ```clojure
+         
+              user=> (pos? -2)
+              false
+              user=> (pos? 1.2)
+              true
+              user=> (pos? 0)
+              false
+              user=> (pos? +0)
+              false
+              user=> (pos? 0.1)
+              true   
+         ```           
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(三） {:&.build}
+		
+    * 负数检查neg?： 负数检查函数 (neg?) 接受一个数值类型参数，如果是小于0返回true，否则返回false   {:&.build}
+           
+         ```clojure
+         
+              user=> (neg? -3)  
+              true  
+              user=> (neg? 0)  
+              false
+                
+         ```           
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(四） {:&.build}
+		
+    * 偶数检查even?：   {:&.build}
+           
+         ```clojure
+         
+              user=> (even? 10)
+              true
+              user=> (even? 3)
+              false
+              user=> (even? 0)
+              true
+              user=> (even? -10)
+              true
+                
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(五） {:&.build}
+		
+    * 奇数检查odd?：    {:&.build}
+           
+         ```clojure
+         
+              user=> (odd? 10)
+              false
+              user=> (odd? 3)
+              true
+              user=> (odd? 0)
+              false
+              user=> (odd? -10)
+              false
+              user=> (odd? -9)
+              true
+                
+         ```           
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
