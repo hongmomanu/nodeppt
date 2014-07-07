@@ -46,7 +46,145 @@ files: /js/demo.js,/css/demo.css
                 1 
                  
          ```
-              
+         
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+
+* 算术运算(三） {:&.build}
+		
+    * 乘法函数 (*) 接受任意数值类型的参数并返回它们的乘积，如果只有一个参数，返回1。 {:&.build}
+           
+         ```clojure
+        
+                user=> (*)  
+                1  
+                user=> (* 1)  
+                1  
+                user=> (* 1 2 3)  
+                6  
+                user=> (* 0 1 2 3)  
+                0  
+                 
+         ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+
+* 算术运算(四） {:&.build}
+		
+    * 除法/： 除法函数 (/) 接受任意数值类型的参数。第一个参数是分子，其他任意参数是分母。如果没有分母，则函数返回 1 / 分子，否则返回分子除以分母。 。 {:&.build}
+           
+         ```clojure
+        
+                user=> (/)
+                java.lang.IllegalArgumentException: Wrong number of args (0) passed to: core$-SLASH- (NO_SOURCE_FILE:0)
+                user=> (/ 2)
+                1/2
+                user=> (/ 2 10)
+                1/5
+                user=> (/ 1 2 4 6)
+                1/48
+                 
+         ```     
+
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+                  
+* 算术运算(五） {:&.build}
+		
+    * 除法/： 除法函数 (/) 接受任意数值类型的参数。第一个参数是分子，其他任意参数是分母。如果没有分母，则函数返回 1 / 分子，否则返回分子除以分母。 。 {:&.build}
+           
+         ```clojure
+        
+                user=> (/)
+                java.lang.IllegalArgumentException: Wrong number of args (0) passed to: core$-SLASH- (NO_SOURCE_FILE:0)
+                user=> (/ 2)
+                1/2
+                user=> (/ 2 10)
+                1/5
+                user=> (/ 1 2 4 6)
+                1/48
+                 
+         ```    
+                         
+
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+                  
+* 算术运算(六） {:&.build}
+		
+    * 商quot： 商函数 (quot) 接受两个数值类型参数并返回第一个参数除以第二个参数的整数商。  {:&.build}
+           
+         ```clojure
+        
+                user=> (quot 10 3)
+                3
+                user=> (quot 10 -3)
+                -3
+                user=> (quot -10 3)
+                -3
+                user=> (quot 11 3)
+                3
+                user=> (quot 12 3)
+                4
+                user=> (quot -5.9 3)
+                -1
+                user=> (quot 15 0)
+                java.lang.ArithmeticException: Divide by zero (NO_SOURCE_FILE:0)
+                 
+         ```
+                                      
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+                  
+* 算术运算(六） {:&.build}
+		
+    * 商quot： 商函数 (quot) 接受两个数值类型参数并返回第一个参数除以第二个参数的整数商。  {:&.build}
+           
+         ```clojure
+        
+                user=> (quot 10 3)
+                3
+                user=> (quot 10 -3)
+                -3
+                user=> (quot -10 3)
+                -3
+                user=> (quot 11 3)
+                3
+                user=> (quot 12 3)
+                4
+                user=> (quot -5.9 3)
+                -1
+                user=> (quot 15 0)
+                java.lang.ArithmeticException: Divide by zero (NO_SOURCE_FILE:0)
+                 
+         ```                                      
+[slide style="background-image:url('/img/bg.jpg	')"]         
+## 数值类型
+----
+                  
+* 算术运算(七） {:&.build}
+		
+    * 注意：商函数quot与/函数不是等价的   {:&.build}
+           
+         ```clojure
+        
+                user=> (= (/ 4 2) (quot 4 2))
+                true
+                user=> (= (/ 3 2) (quot 3 2))
+                false
+                user=> (/ 3 2)
+                3/2
+                user=> (quot 3 2)
+                1
+                 
+         ```           
+
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
 ----
