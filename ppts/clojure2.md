@@ -961,13 +961,24 @@ files: /js/demo.js,/css/demo.css
 [slide style="background-image:url('/img/bg.jpg	')"]   
 ## Maps （key-value键值对）
 ----    
-* 修改   {:&.build}
+* 修改新增字键值对   {:&.build}
        
         ```clojure
                 user=> (assoc {:name "jack"} :name "hellojack" )
                 {:name "hellojack"}
                 user=> (assoc {:name "jack"} :sex "man" )
                 {:sex "man", :name "jack"}
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## Maps （key-value键值对）
+----    
+* 删除键值对   {:&.build}
+       
+        ```clojure
+                user=> (dissoc {:name "jack" :sex "man"} :sex )
+                {:name "hellojack"}
                 
          ```          
  
