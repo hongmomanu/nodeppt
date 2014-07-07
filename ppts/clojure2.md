@@ -714,6 +714,45 @@ files: /js/demo.js,/css/demo.css
          ```          
  
 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* string操作（一）   {:&.build}
+		
+    * count函数： count函数接受字符串参数时，返回字符串的字符数 
+        ```clojure
+                user=> (count)
+                java.lang.IllegalArgumentException: Wrong number of args (0) passed to: core$count (NO_SOURCE_FILE:175)
+                user=> (count nil)
+                0
+                user=> (count "abc123")
+                6
+                
+         ```          
+ 
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 字符串
+----
+    
+* string操作（二）   {:&.build}
+		
+    * subs函数： subs函数接受两个或三个参数, 第一个是字符串，第二个是一个整数偏移量，第三个（可选）是另一个整数偏移量。函数返回从第一个偏移量（含），到第二个（不含）偏移量或者结尾（如果没有第二个偏移量）截取的子字符串 
+        ```clojure
+                user=> (subs "ithomer" 1)
+                "thomer"
+                user=> (subs "ithomer" 1 3)
+                "th"
+                user=> (subs "ithomer" 1 (count "ithomer"))
+                "thomer"
+                user=> (subs "ithomer" 1 20)
+                java.lang.StringIndexOutOfBoundsException: String index out of range: 20 (NO_SOURCE_FILE:0)
+                user=> (subs "ithomer")
+                java.lang.IllegalArgumentException: Wrong number of args (1) passed to: core$subs (NO_SOURCE_FILE:0)
+                
+         ```          
+ 
+
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
 ----
