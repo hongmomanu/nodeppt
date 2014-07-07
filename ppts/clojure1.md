@@ -91,7 +91,7 @@ files: /js/demo.js,/css/demo.css
 
     ```bash
 
-		 lein new luminus mytestapp
+		 lein new app hello
 		 
 	```
 
@@ -107,7 +107,7 @@ files: /js/demo.js,/css/demo.css
 
     ```bash
 
-		 lein ring server-headless
+		 lein run
 		 
 	```
 
@@ -115,9 +115,7 @@ files: /js/demo.js,/css/demo.css
     
     ```bash
 
-		 lein ring uberjar   //一个独立运行的jar包
-		 
-		 lein ring uberwar   //可发布在任何java容器下的war包 ，tomcat jetty weblogic等
+		 lein uberjar   //一个独立运行的jar包
 		 
 	```
   
@@ -133,7 +131,9 @@ files: /js/demo.js,/css/demo.css
 ## 课后作业
 ---
 
-* 下载安装idea。 {:&.build}
+* 下载安装Leiningen。 {:&.build}
+
+* 下载安装idea。
 
 * 新建一个应用项目，并导入到idea
 
