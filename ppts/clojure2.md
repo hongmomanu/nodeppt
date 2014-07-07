@@ -550,6 +550,44 @@ files: /js/demo.js,/css/demo.css
               true
                 
          ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 验证函数(六） {:&.build}
+		
+    * 数值检查number?： 数值检查函数 (number?) 接受一个参数，如果是数值返回true，否则返回false   {:&.build}
+           
+         ```clojure
+         
+              user=> (number? 3.2)  
+              true  
+              user=> (number? "2")  
+              false 
+                
+         ```           
+[slide style="background-image:url('/img/bg.jpg	')"]   
+## 数值类型
+----
+    
+* 强制转换（一） {:&.build}
+		
+    * 强制转换支持以下类型： {:&.build}
+           
+         ```bash
+         
+              byte  Coerce to byte.   
+              short  Coerce to short.   
+              int  Coerce to int.   
+              long  Coerce to long.   
+              float  Coerce to float.   
+              double  Coerce to double.   
+              bigint  Coerce to BigInteger.   
+              bigdec  Coerce to BigDecimal.   
+              num  Coerce to Number.   
+              rationalize  returns the rational value of num   
+                
+         ```           
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
