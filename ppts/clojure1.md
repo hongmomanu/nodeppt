@@ -125,9 +125,19 @@ files: /js/demo.js,/css/demo.css
 ## 开发工具idea介绍
 ---
 
-* idea是一个和 eclipse，netbean等集成环境类似的工具，只是性能更好一点。 {:&.build}
+* idea是一个和 eclipse，netbeans等集成环境类似的工具，只是性能更好一点。 {:&.build}
 
 * idea下载地址，可以选择[IntelIdea下载](http://www.jetbrains.com/idea/download/)
+
+[slide]
+## 课后作业
+---
+
+* 下载安装idea。 {:&.build}
+
+* 新建一个应用项目，并导入到idea
+
+* 运行项目根据提示输入打印内容。
 
     
 
