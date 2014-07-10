@@ -496,20 +496,13 @@ files: /js/demo.js,/css/demo.css
                         
          ```
 [slide style="background-image:url('/img/bg.jpg	')"]        
-## 集合函数
+## 作业
 ----
 
-* into 函数   {:&.build} 
-    * into 函数把两个list里面的元素合并成一个新的大list {:&.build}
-        
-         ```clojure
-                  
-             (def kids-of-mike '("Greg" "Peter" "Bobby"))
-             (def kids-of-carol '("Marcia" "Jan" "Cindy"))
-             (def brady-bunch (into kids-of-mike kids-of-carol))
-             (println brady-bunch) ; -> (Cindy Jan Marcia Greg Peter Bobby)
-                        
-         ```
+* 在作业一的基础上，打印出名字的镜像。   {:&.build} 
+* 如输入 jack，打印出Hello, jack ! i am kcaj.
+* 作业就两三行代码，也很简单，不会占用大家多少时间，大家写好，发到我邮箱里面 hongmomanu@163.com        
+         
         
     
    
