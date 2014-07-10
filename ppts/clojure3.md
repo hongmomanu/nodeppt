@@ -437,12 +437,79 @@ files: /js/demo.js,/css/demo.css
 ## 集合函数
 ----
 
-* app函数   {:&.build} 
+* apply函数   {:&.build} 
     * apply 把给定的集合里面的所有元素一次性地给指定的函数作为参数调用，然后返回这个函数的返回值。
     所以apply与map的区别就是map返回的还是一个集合，
     而apply返回的是一个元素， 可以把apply看作是SQL里面的聚合函数。 {:&.build}
         
-         
+         ```clojure
+                  
+             (apply + [2 4 7]); -> 13
+                        
+         ```        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* 取集合中元素（一）   {:&.build} 
+    * 有很多函数从一个集合里面获取一个元素，比如：。 {:&.build}
+        
+         ```clojure
+                  
+             (def stooges ["Moe" "Larry" "Curly" "Shemp"])
+             (first stooges) ; -> "Moe"
+             (second stooges) ; -> "Larry"
+             (last stooges) ; -> "Shemp"
+             (nth stooges 2) ; indexes start at 0 -> "Curly"
+                        
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* 取集合中元素（二）   {:&.build} 
+    * 也有一些函数从一个集合里面获取多个元素，比如： {:&.build}
+        
+         ```clojure
+                  
+             (next stooges) ; -> ("Larry" "Curly" "Shemp")
+             (butlast stooges) ; -> ("Moe" "Larry" "Curly")
+             (drop-last 2 stooges) ; -> ("Moe" "Larry")
+             (nthnext stooges 2) ; -> ("Curly" "Shemp")
+                        
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* into 函数   {:&.build} 
+    * into 函数把两个list里面的元素合并成一个新的大list {:&.build}
+        
+         ```clojure
+                  
+             (def kids-of-mike '("Greg" "Peter" "Bobby"))
+             (def kids-of-carol '("Marcia" "Jan" "Cindy"))
+             (def brady-bunch (into kids-of-mike kids-of-carol))
+             (println brady-bunch) ; -> (Cindy Jan Marcia Greg Peter Bobby)
+                        
+         ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* into 函数   {:&.build} 
+    * into 函数把两个list里面的元素合并成一个新的大list {:&.build}
+        
+         ```clojure
+                  
+             (def kids-of-mike '("Greg" "Peter" "Bobby"))
+             (def kids-of-carol '("Marcia" "Jan" "Cindy"))
+             (def brady-bunch (into kids-of-mike kids-of-carol))
+             (println brady-bunch) ; -> (Cindy Jan Marcia Greg Peter Bobby)
+                        
+         ```
         
     
    
