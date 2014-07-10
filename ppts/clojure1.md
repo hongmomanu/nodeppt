@@ -29,7 +29,7 @@ files: /js/demo.js,/css/demo.css
 
 * Clojure天然的并发特性 
 
-* Clojure主要目标让编程变得简单，安全，可靠
+* Clojure主要目标让编程变得灵活，简单，安全，可靠，强大。
 
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
