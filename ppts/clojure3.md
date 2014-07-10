@@ -111,12 +111,10 @@ files: /js/demo.js,/css/demo.css
 ----
 
 * 创建函数(六） {:&.build} 
-    * defn（续）{:&.build}
-        
-         ```clojure
+    * defn (续)  {:&.build}
          
+         ```clojure
             user=> (doc f4)			;通过doc查看函数注释信息  
-            -------------------------
             user/f4
             ([])
               f4 function comment
@@ -126,11 +124,6 @@ files: /js/demo.js,/css/demo.css
             #'user/f5  
             user=> (f5)  				; 无参数
             "no parameter"  
-            user=> (f5 "clojure")  		; 一个参数
-            "my name is clojure"  
-            user=> (defn f1 [& a] (str a))		;定义变参函数  
-            #'user/f1  
-            
          ```
         
         
@@ -139,15 +132,30 @@ files: /js/demo.js,/css/demo.css
 ----
 
 * 创建函数(七） {:&.build} 
-    * defn（续）{:&.build}
+    * defn（续） {:&.build}
         
          ```clojure
+            user=> (f5 "clojure")  		; 一个参数
+                        "my name is clojure"  
+                        
+            user=> (defn f1 [& a] (str a))		;定义变参函数  
+            #'user/f1 
             user=> (f1 1 2 3)  
             "(1 2 3)"  
             user=> (defn m [& arg] (str arg ", size=" (count arg)))		;定义变参函数  
             #'user/m  
             user=> (m 1 2 3 4 5)  
             "(1 2 3 4 5), size=5"  
+            
+         ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 创建函数(八） {:&.build} 
+    * defn（续） {:&.build}
+        
+         ```clojure
             user=> (m "a" 1 2.3 -1)  
             "(\"a\" 1 2.3 -1), size=4"  
             user=> (defn exp [a f1 b f2 c] (f2 (f1 a b) c))				;函数作为参数  
@@ -165,7 +173,7 @@ files: /js/demo.js,/css/demo.css
 ## 函数定义
 ----
 
-* 创建函数(八） {:&.build} 
+* 创建函数(九） {:&.build} 
     * defn-： defn-与defn功能一致，都是用于定义函数的，defn-定义的函数作用域是私有的，而defn定义的函数是公有的，如下： {:&.build}
         
          ```clojure
@@ -177,6 +185,16 @@ files: /js/demo.js,/css/demo.css
             #'test1/bar  
             test1=> (foo)			;当前命名空间内调用foo函数  
             "hello ithomer" 
+            
+         ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 创建函数(十） {:&.build} 
+    * defn-（续）{:&.build}
+        
+         ```clojure
             test1=> (bar)			;当前命名空间内调用bar函数  
             "hello hello ithomer" 
             test1=> (ns test2)		;切换到test2命名空间中  
@@ -190,7 +208,7 @@ files: /js/demo.js,/css/demo.css
 ## 函数定义
 ----
 
-* 创建函数(九） {:&.build} 
+* 创建函数(十一） {:&.build} 
     * 组合函数comp： 形如   ((comp f1 f2 .. fn) arg1 arg2 .. argn)  
       就是对参数从右到左组合执行所有函数，可以转变为： (f1 (f2 (.. (fn arg1 arg2 .. argn))))
       举例如下：  {:&.build}
@@ -210,22 +228,31 @@ files: /js/demo.js,/css/demo.css
 ## 函数定义
 ----
 
-* 创建函数(十） {:&.build} 
+* 创建函数(十二） {:&.build} 
     * 偏函数partial： 形如 ((partial  f  arg1 arg2 .. argn)  arga argb .. argz) 
       就是执行： (f  arg1 arg2 .. argn  arga argb .. argz) 
       注意：偏函数的第一个参数是一个函数，后面至少有1个其他参数 
       partial函数称为“偏函数”或者“部分完整函数”，因为它是不完整的，定义也用def而不是defn。  {:&.build}
         
-         ```clojure
-            user=> (defn f [n] (* n 10));正常函数  
-            #'user/f  
-            user=> (f 2)  
-            20  
-            user=> (def fp (partial * 10));偏函数  
-            #'user/fp  
-            user=> (fp 2)  
-            20  
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 创建函数(十三） {:&.build} 
+    * 偏函数partial（续）  {:&.build}
+        ```clojure
+                user=> (defn f [n] (* n 10));正常函数  
+                #'user/f  
+                user=> (f 2)  
+                20  
+                user=> (def fp (partial * 10));偏函数  
+                #'user/fp  
+                user=> (fp 2)  
+                20  
          ```
+        
+         
         
     
    
@@ -233,7 +260,7 @@ files: /js/demo.js,/css/demo.css
 ## 函数定义
 ----
 
-* 创建函数(十一） {:&.build} 
+* 创建函数(十四） {:&.build} 
     * constantly函数： constantly函数接受一个参数x，并返回一个变参函数，该变参函数无论参数是什么，都返回这个x值。  {:&.build}
         
          ```clojure
@@ -262,6 +289,160 @@ files: /js/demo.js,/css/demo.css
             "X B C D"
                
          ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 函数调用（二）  {:&.build} 
+    * ->>： 后面的函数迭代使用之前的函数结果作为最后一个参数，返回最后一次函数调用的值，试看下面两个语句：   {:&.build}
+        
+         ```clojure
+         
+            user=> (-> 10 (/ 3))  	; 10/3  10作为/函数第一个参数  
+            10/3
+            user=> (->> 10 (/ 3)) 	; 3/10  10作为/函数最后一个参数  
+            3/10
+               
+         ```
+         
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 函数调用（三）  {:&.build} 
+    * eval： eval解析表达式数据结构（不是字符串），并返回结果。   {:&.build}
+        
+         ```clojure
+         
+            user=> (eval (str "(println 1)"))			;str函数返回字符串
+            "(println 1)"
+            user=> (read-string "(println 1)")			;而read-string函数用于从字符串中读取数据结构
+            (println 1)
+            user=> (eval (read-string "(println 1)"))  
+            1
+            nil
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 函数调用（四）  {:&.build} 
+    * apply函数： apply 把给定的集合里面的所有元素一次性地给指定的函数作为参数调用，然后返回这个函数的返回值。可以把apply看作是SQL里面的聚合函数，如下：    {:&.build}
+        
+         ```clojure
+         
+            user=> (apply + [1 2 3 4])  
+            10 
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 函数定义
+----
+
+* 函数检查   {:&.build} 
+    * fn?： fn?用于检查给定的参数是否为函数，是返回true，否则返回false，如：     {:&.build}
+        
+         ```clojure
+         
+            user=> (fn? #("test"))  
+            true
+            user=> (fn? 1)  
+            false
+            user=> (fn? nil)
+            false
+            user=> (fn? +)
+               
+         ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* 何为集合   {:&.build} 
+    * 集合，就是我们在基本语法上面说的序列，Map这些存放多个数据的数据结构总称     {:&.build}
+        
+         ```clojure
+         
+            user=> [1 2 3]          ;序列是集合
+            [1 2 3]
+            user=> {:name 1 :sex 2}  ;Map 也是集合  
+            {:name 1 :sex 2}
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* count函数   {:&.build} 
+    * count 返回集合里面的元素个数，比如：     {:&.build}
+        
+         ```clojure
+         
+            (count [19 "yellow" true]) ; -> 3
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* conj函数   {:&.build} 
+    * conj 函数是 conjoin的缩写, 添加一个元素到集合里面去:     {:&.build}
+        
+         ```clojure
+         
+            (conj [19 "yellow" true] "name") ; -> [19 "yellow" true "name"]
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* reverse函数   {:&.build} 
+    * reverse 函数是把集合里面的元素反转.     {:&.build}
+        
+         ```clojure
+         
+            (reverse [2 4 7]) ; -> (7 4 2)
+               
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* map函数   {:&.build} 
+    * map 对一个给定的集合里面的每一个元素调用一个指定的方法，然后这些方法的所有返回值构成一个新的集合（LazySeq）返回。
+    这个指定了函数也可以有多个参数，那么你就需要给map多个集合了。
+    如果这些给的集合的个数不一样，那么执行这个函数的次数取决于个数最少的集合的长度。     {:&.build}
+        
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* map函数例子   {:&.build} 
+    ```clojure
+        (map #(+ % 3) [2 4 7]) ; -> (5 7 10)
+        (map + [2 4 7] [5 6] [1 2 3 4]) ;  -> (8 12)
+                   
+    ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 集合函数
+----
+
+* app函数   {:&.build} 
+    * apply 把给定的集合里面的所有元素一次性地给指定的函数作为参数调用，然后返回这个函数的返回值。
+    所以apply与map的区别就是map返回的还是一个集合，
+    而apply返回的是一个元素， 可以把apply看作是SQL里面的聚合函数。 {:&.build}
+        
+         
         
     
    
