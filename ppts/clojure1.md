@@ -31,6 +31,10 @@ files: /js/demo.js,/css/demo.css
 
 * Clojure主要目标让编程变得灵活，简单，安全，可靠，强大。
 
+* 支持懒惰计算（lazy evaluation）和引用透明性。
+   
+
+
 [slide]
 ## 引用网上的一段话，大家读一读，也许会有感觉
 ----
@@ -68,6 +72,94 @@ files: /js/demo.js,/css/demo.css
 
 
 
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 就几个例子简单说说(一)
+----
+
+* 不可变数据 {:&.build}
+	``` clojure 
+          
+         (def a '( 1 2))
+         (def b (cons 0 a))
+         (println a b)
+         
+      ```   	
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 就几个例子简单说说(二)
+----
+
+* 高级函数，一个函数可以作为另一个函数的输入 {:&.build}
+	``` clojure 
+          
+         (defn my-func [a b]
+         
+            (b a )
+         )
+         (my-func "hello jack !"  println)
+      ```   	
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 就几个例子简单说说(三)
+----
+
+* 高级函数，一个函数可以作为另一个函数的输出 {:&.build}
+	``` clojure 
+          
+         (defn my-func-a [s]
+         
+            (str "func a: "  s)
+         )
+         (defn my-func-b [s]
+                  
+           (str "func b: "  s)
+         )
+         (defn my-func-out [n]
+          (cond 
+            (> n 0) my-func-a
+            :else my-func-b
+          )
+         )
+         (println ((my-func-out 0) "高阶函数测试") )
+      ```   	
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 就几个例子简单说说(四)
+----
+
+* 懒惰计算 {:&.build}
+	``` clojure 
+         (println (take 10 (iterate inc 1))) 
+         
+      ```   	
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 关于引用透明性
+----
+
+* 相同的输入一定会返回相同的输出，即：一个函数的计算过程不会因为任何外部环境的改变而发生变化 {:&.build}
+	``` clojure 
+         (println (take 10 (iterate inc 1))) 
+         
+      ```   	
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 处理数据，用函数式会更加简洁
+----
+
+* 遍历列表，提取每个奇数并都乘以2,最后求和打印出来 {:&.build}
+	``` clojure 
+             (println (reduce + (map #(* 2 %) (filter odd? (range 0 4))))) 
+         
+      ```   	
+* 大家想一想，如果用java写，要多少行代码，需要声明多少个中间变量。
 
 [slide]
 
