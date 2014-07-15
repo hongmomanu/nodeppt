@@ -25,20 +25,26 @@ files: /js/demo.js,/css/demo.css
         
 [slide style="background-image:url('/img/bg.jpg	')"]
 
-## 函数定义
+## 语法注释
 ----
 
-* 创建函数(二） {:&.build} 
-    * 简短的函数可以使用#()，%表示唯一的参数；%1、%2 ..依次表示第1、2、..个参数；%&表示所有参数，如下：  {:&.build}
+* 多行代码块注释 {:&.build} 
+    * #_() {:&.build}
         
          ```clojure
         
-                user=> (#(/ % 3) 4)   ;结果为 4/3
-                4/3  
-                user=> (#(/ %2 %1) 3 4)   ;结果为 4/3 
-                4/3  
-                user=> (#(apply / %&) 3 5 7)   ;结果为3/5/7  
-                3/35  
+                user=> (println "hello" (str "jack"))
+                hello jack
+                nil  
+                user=> (println "hello" #_(str "jack"))
+                hello
+                nil
+                user=> (println "hello" #_(str "jack"))
+                hello
+                nil 
+                user=> #_(println 
+                         "hello" #_(str "jack"))
+                
                  
          ```
 
