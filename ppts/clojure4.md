@@ -411,5 +411,42 @@ files: /js/demo.js,/css/demo.css
              
        ``` 
        
+[slide style="background-image:url('/img/bg.jpg	')"]                   
+## 条件判断(续)
+----
+
+*   do:do执行多条语句，返回最后一条语句值 :    {:&.build}
+       ```clojure
+             hello.core=>  (do (println 123) (println 321) -1)    
+             123
+             321
+             -1
+       ``` 
+       
+[slide style="background-image:url('/img/bg.jpg	')"]                   
+## 条件判断(续)
+----
+
+*   loop、recur:递归调用 :    {:&.build}
+       ```clojure
+             hello.core=>  (loop [sum 0 cnt 10] (if (= cnt 0) sum (recur (+ cnt sum) (dec cnt))))    
+             55
+             hello.core=>  (loop [sum 0 cnt 0] (if (= cnt 11) sum (recur (+ cnt sum) (inc cnt))))    
+             55
+       ``` 
+       
+   
+[slide style="background-image:url('/img/bg.jpg	')"]                   
+## 作业
+----
+
+*   在上次作业的基础上，加入输入年纪的功能 ，如小于18则打印出未成年人，反之为成年人:    {:&.build}
+       ```clojure
+             hello.core=>  (loop [sum 0 cnt 10] (if (= cnt 0) sum (recur (+ cnt sum) (dec cnt))))    
+             55
+             hello.core=>  (loop [sum 0 cnt 0] (if (= cnt 11) sum (recur (+ cnt sum) (inc cnt))))    
+             55
+       ``` 
+       
    
  
