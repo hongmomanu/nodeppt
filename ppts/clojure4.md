@@ -405,7 +405,9 @@ files: /js/demo.js,/css/demo.css
              hello.core=> (f 5) 
              "5的倍数"
              hello.core=> (f 15) 
-             "5的倍数"
+             "5的倍数" 
+             hello.core=> (f 1) 
+             "others"
              
        ``` 
        
