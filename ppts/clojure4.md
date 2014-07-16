@@ -441,11 +441,13 @@ files: /js/demo.js,/css/demo.css
 ----
 
 *   在上次作业的基础上，加入输入年纪的功能 ，如小于18则打印出未成年人，反之为成年人:    {:&.build}
-       ```clojure
-             hello.core=>  (loop [sum 0 cnt 10] (if (= cnt 0) sum (recur (+ cnt sum) (dec cnt))))    
-             55
-             hello.core=>  (loop [sum 0 cnt 0] (if (= cnt 11) sum (recur (+ cnt sum) (inc cnt))))    
-             55
+       ```bash
+             请输入姓名
+             name
+             请输入年龄
+             15
+             Hello,  name  i  am eman ! 未成年人
+
        ``` 
        
    
