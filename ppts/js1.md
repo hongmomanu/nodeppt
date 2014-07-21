@@ -101,4 +101,12 @@ files: /js/demo.js,/css/demo.css
 
 * Jquery2.x 不支持ie8以下的浏览器，所以更加轻量级，对新的浏览器特性如html5特性支持更好。  
 
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 用一个例子说明Jquery是如何工作的
+----
+    
+* Jquery1.x 支持ie6以上浏览器，对于旧的浏览器兼容更好。  {:&.build} 
+
+* Jquery2.x 不支持ie8以下的浏览器，所以更加轻量级，对新的浏览器特性如html5特性支持更好。  
+
 
