@@ -35,7 +35,23 @@ files: /js/demo.js,/css/demo.css
     
     ```bash
              
-         “The Write Less, Do More JavaScript Library”   
-                      
+         1. The uncompressed .js file 有注释，换行，缩进等，代码较容易阅读，
+            但文件比较大，适合开发时引用. 
+         
+         2. The minified .js file  所有注释换行格式化都被删除，不易阅读，
+            但文件较小，适合产品发布时使用。 
+                       
     ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 什么是Jquery（续）
+----
+
+* 获取Jquery: {:&.build} 
+    
+    * [Jquery官方网址](https://jquery.org/)
+    
+    * [未解压缩uncompressed 下载](http://code.jquery.com/jquery-1.11.1.js)
+    
+    * [压缩minified 下载](http://code.jquery.com/jquery-1.11.1.min.js)
 
