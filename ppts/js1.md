@@ -55,3 +55,29 @@ files: /js/demo.js,/css/demo.css
     
     * [压缩minified 下载](http://code.jquery.com/jquery-1.11.1.min.js)
 
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## What can you do with jQuery?
+----
+
+* jQuery可以很容易地编写功能强大的JavaScript应用程序和创建引人注目的动画效果。诸如此类，jQuery可以做到下面事情: {:&.build} 
+    
+    * 对元素增加动态的效果.jQuery的可以让你轻松地添加效果，如淡入/淡出，内/外滑动，并展开/收缩。
+    
+    * Making  Ajax 请求. These use JavaScript to request additional data from the Web server without having to reload the page.
+    
+    * 操作 DOM. 您可以轻松地只用几行代码来添加，删除和修改网页的内容。
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## What can you do with jQuery?（续）
+----
+    
+* 创建图像幻灯片。你可以使用jQuery特效打造漂亮的动画幻灯片。   {:&.build} 
+
+* 制作下拉菜单。 jQuery的可以很容易地创建带有动画的多层次的下拉菜单。
+
+* 创建拖动和拖放界面。使用jQuery来构建与可以简单地通过拖放重新定位或重新排序元素的网页。
+
+* 添加强大的表单。使用jQuery，您可以轻松添加复杂的客户端表单验证，建立通过ajax从服务器端获取数据的文本等。
+
