@@ -147,6 +147,9 @@ files: /js/demo.js,/css/demo.css
                 [org.xerial/sqlite-jdbc "3.7.15-M1"]
                  
          ```
+
+
+        
         
 [slide style="background-image:url('/img/bg.jpg	')"]
 ## 数据库操作（续） 
@@ -163,6 +166,91 @@ files: /js/demo.js,/css/demo.css
                                      })
                  
          ```
+
+        
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（一） {:&.build} 
+    * 定义一个数据源:  {:&.build}
+        
+         ```clojure
+                (defdb db schema/db-spec-sqlite)
+         ```
+        
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（二） {:&.build} 
+    * 定义一个表model:  {:&.build}
+        
+         ```clojure
+                (defentity users
+                  (database db)
+                  )
+         ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（三） {:&.build} 
+    * 增:  {:&.build}
+        
+         ```clojure
+                (insert users
+                  (values {:name "doe"}))
+         ```
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（四） {:&.build} 
+    * 删:  {:&.build}
+        
+         ```clojure
+                (delete users
+                  (where {:id 1}))
+         ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（五） {:&.build} 
+    * 改:  {:&.build}
+        
+         ```clojure
+                
+                  (update users
+                  (set-fields data)
+                  (where {:id id}))
+         ```
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（六） {:&.build} 
+    * 查:  {:&.build}
+        
+         ```clojure
+             (select users
+                 (where {:username "name"})
+                 )   
+         ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 数据库操作（续） 
+----
+
+* korma语法简介（七） {:&.build} 
+    * 更多资料，详细用法，请看官网[korma 官网api文档](http://sqlkorma.com/docs):  {:&.build}
+        
+
         
 [slide style="background-image:url('/img/bg.jpg	')"]
 ## 数据库操作（续） 
@@ -201,6 +289,7 @@ files: /js/demo.js,/css/demo.css
                       )
                     )
          ```
+         
         
 [slide style="background-image:url('/img/bg.jpg	')"]
 ## 数据库操作（续） 
