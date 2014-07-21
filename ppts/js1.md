@@ -81,3 +81,16 @@ files: /js/demo.js,/css/demo.css
 
 * 添加强大的表单。使用jQuery，您可以轻松添加复杂的客户端表单验证，建立通过ajax从服务器端获取数据的文本等。
 
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 最让人省心的特点
+----
+    
+* 另一个jQuery的优势在于，它可以很容易地编写JavaScript在许多不同的浏览器工作。
+
+   流行的浏览器，如IE浏览器之间的不兼容性，以及Firefox，Safari，chrome之间的不兼容性。
+   
+   因此你经常需要编写不同的JavaScript代码块来兼容他们，增加开发的复杂度。
+   
+   但是使用jQuery，你只需要调用相应的jQuery函数，让jQuery来自动生成不同的运行在不同的浏览器下的代码！   {:&.build} 
+
+
