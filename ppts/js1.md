@@ -25,12 +25,6 @@ files: /js/demo.js,/css/demo.css
 
 * jQuery 是一个能够让用javascrpt语法建立页面和应用变的快速和简单的库 。通常一个10-20行用纯的原始的javascript语法写的代码用Jquery代码写也许只需一行。 {:&.build} 
 
-* Jquery的目标是:
-         
-    ```bash
-             
-         “The Write Less, Do More JavaScript Library”   
-                      
-    ```
+* jQuery自己本身也是用JavaScript写的,最后它以一个单一的js文件形式发布，得以让你的web应用项目引用.然后你可以在你的javascript语句调用Jquery中各种方法函数。
 
 
