@@ -18,5 +18,19 @@ files: /js/demo.js,/css/demo.css
          “The Write Less, Do More JavaScript Library”   
                       
     ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 到底什么是Jquery
+----
+
+* jQuery 是一个能够让用javascrpt语法建立页面和应用变的快速和简单的库 。通常一个10-20行用纯的原始的javascript语法写的代码用Jquery代码写也许只需一行。 {:&.build} 
+
+* Jquery的目标是:
+         
+    ```bash
+             
+         “The Write Less, Do More JavaScript Library”   
+                      
+    ```
 
 
