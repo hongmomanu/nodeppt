@@ -93,4 +93,12 @@ files: /js/demo.js,/css/demo.css
    
 * 但是使用jQuery，你只需要调用相应的jQuery函数，让jQuery来自动生成不同的运行在不同的浏览器下的代码！  
 
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 关于Jquery的版本
+----
+    
+* Jquery1.x 支持ie6以上浏览器，对于旧的浏览器兼容更好。  {:&.build} 
+
+* Jquery2.x 不支持ie8以下的浏览器，所以更加轻量级，对新的浏览器特性如html5特性支持更好。  
+
 
