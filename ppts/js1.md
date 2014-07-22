@@ -255,8 +255,21 @@ files: /js/demo.js,/css/demo.css
 * Callback without Arguments：  {:&.build} 
     ```javascript
        
-      $.get( "www.baidu.com", function(){
+      $.get( "hello.html", function(){
             alert(1);
+      });
+       
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Callbacks 
+----
+    
+* Callback with Arguments：  {:&.build} 
+    ```javascript
+       
+      $.get( "hello.html", function(data){
+            alert(data);
       });
        
     ```
