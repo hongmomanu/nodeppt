@@ -318,7 +318,121 @@ files: /js/demo.js,/css/demo.css
         // Two ways to achieve an undefined value.
         var bar1 = undefined;
         var bar2;
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Objects
+----
+
+* 除了以上基本类型，所有其它都是对象，我们这里将设计到以下内容： {:&.build} 
+* Object
+* Array
+* Function
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Object
+----
+
+* 创建一个对象，最简单的方法是既可以通过对象的构造函数或称为对象文字的简写语法。
+ 这些简单的对象是无序的键/值对。属性值可以是任何有效的JavaScript类型，
+ 甚至另一个对象。创建或访问一个对象的属性，我们使用了被称为“点号”或“括号符号。” {:&.build} 
+    ```javascript
+        // Creating an object with the constructor:
+        var person1 = new Object;
+        person1.firstName = "John";person1.lastName = "Doe";
+        alert( person1.firstName + " " + person1.lastName );
+        // Creating an object with the object literal syntax:
+        var person2 = {
+            firstName: "Jane",
+            lastName: "Doe"
+        };
+        alert( person2.firstName + " " + person2.lastName );
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Array
+----
+
+* 一个数组是一个包含多个对象的对象。
+  索引从零开始，length是数组的属性。类似于一个基本对象，数组可以使用Array构造函数或称为数组的简写语法来创建。 {:&.build} 
+    ```javascript
+        // Creating an array with the constructor:
+        var foo = new Array;
+        // Creating an array with the array literal syntax:
+        var bar = [];
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Array（续）
+----
+
+* Array的常用方法。 {:&.build} 
+    ```javascript
+        // Using the push(), pop(), unshift() and shift() methods on an array.
+         
+        var foo = [];
+        foo.push( "a" );
+        foo.push( "b" );
+         
+        alert( foo[ 0 ] ); // a
+        alert( foo[ 1 ] ); // b
+         
+        alert( foo.length ); // 2
         
     ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Array（续）
+----
+
+* Array的常用方法（续）。 {:&.build} 
+    ```javascript
+        foo.pop();
+                 
+        alert( foo[ 0 ] ); // a
+        alert( foo[ 1 ] ); // undefined
+         
+        alert( foo.length ); // 1
+         
+        foo.unshift( "z" );
+         
+        alert( foo[ 0 ] ); // z
+        alert( foo[ 1 ] ); // a
+         
+        alert( foo.length ); // 2
+        
+    ```
+    
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Array（续）
+----
+
+* Array的常用方法（续）。 {:&.build} 
+    ```javascript
+        foo.shift();
+        alert( foo[ 0 ] ); // a
+        alert( foo[ 1 ] ); // undefined
+         
+        alert( foo.length ); // 1
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Function
+----
+
+* Funcion 定义。 {:&.build} 
+    ```javascript
+        var func_a=function(){
+          alert("func_a")
+        }
+        
+        function func_b(){
+          alert("func_b")
+        }
+        
+    ```
+    
     
     
