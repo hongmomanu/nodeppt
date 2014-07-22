@@ -49,3 +49,47 @@ files: /js/demo.js,/css/demo.css
                       
     ```
     
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 前言（续）
+----
+
+* 看一个简单的例子，看看CSS and JavaScrip是怎么一起工作的:
+         
+    ```html
+        <!doctype html>
+        <html lang="zh">
+        <head>
+            <meta charset="utf-8" />
+            <title>Hello World</title>
+         
+            <!-- CSS for presentation. -->
+            <style>
+            h1 { font-size: 14px; color: hotpink; }
+            button { color: red; }
+            </style>
+        </head>
+                      
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 前言（续）
+----
+
+* 续上:
+         
+    ```html
+        <body>
+            <h1>Hello World</h1>
+            <button>Click Me!</button>
+            <!-- JavaScript for interactivity. -->
+            <script>
+            var button = document.querySelector( "button" );
+            button.addEventListener( "click", function( ev ) {
+                alert( "Hello" );
+            }, false);
+            </script>
+        </body>
+        </html> 
+                      
+    ```
+    
