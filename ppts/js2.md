@@ -137,3 +137,50 @@ files: /js/demo.js,/css/demo.css
                       
     ```
     
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 运行代码(续)
+----
+
+* 运行位置。在节点加载之前。: {:&.build} 
+         
+    ```html
+        
+        <!doctype html>
+        <html>
+        <head>
+            <script>
+            // Attempting to access an element too early will have unexpected results.
+            var title = document.getElementById( "hello-world" );
+            console.log( title );
+            </script>
+        </head>
+        <body>
+         
+        <h1 id="hello-world">Hello World</h1>
+         
+        </body>
+        </html>
+                      
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 运行代码(续)
+----
+
+* 运行位置。在节点加载之后。: {:&.build} 
+         
+    ```html
+        
+        <!doctype html>
+        <html>
+        <body>
+        <h1 id="hello-world">Hello World</h1>
+          <script>
+            var title = document.getElementById( "hello-world" );
+            console.log( title );
+          </script>
+        </body>
+        </html>
+                      
+    ```
+    
