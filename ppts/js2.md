@@ -230,3 +230,95 @@ files: /js/demo.js,/css/demo.css
                       
     ```
 
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 语法基础知识(续)
+----
+
+* 变量定义.变量定义可以使用多个var语句，或者在单个合并var语句来定义: {:&.build} 
+         
+    ```javascript
+        // 合法:
+        var test = 1;
+        var test2 = function() { ... };
+        var test3 = test2( test );
+        // 也合法:
+        var test4 = 1,
+            test5 = function() { ... },
+            test6 = test2( test );
+    ```
+* 变量可以在不给他们分配一个值来声明。没有值声明的变量的值是undefined。 
+    ```javascript
+        var x;
+        x === undefined; // true
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 类型
+----
+
+* 在JavaScript类型分为两类：基本类型和对象。基本类型包括： {:&.build} 
+* String
+* Number
+* Boolean
+* null
+* undefined
+
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## String
+----
+
+* 字符串是文本包裹在单引号或双引号。这是最好的做法是始终使用一个或另一个。
+  有时可能当字符串中包含有用于创建字符串的引号时,
+  在这种情况下，无论是使用\反斜杠转义字符，还是另一个引号，都可以。： {:&.build} 
+    ```javascript
+        // Strings can be created with double or single quotes.
+        var a = "I am a string";
+        var b = 'So am I!';
+        // Sometimes a string may contain quotation marks.
+        var statement1 = 'He said "JavaScript is awesome!"';
+        var statement2 = "He said \"JavaScript is awesome!\"";
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Number
+----
+
+* 数值类型是任意的正的或负的数值。整数和浮点值之间没有任何区别： {:&.build} 
+    ```javascript
+        // Numbers are any whole or floating point integer.
+        var num1 = 100;
+        var num2 = 100.10;
+        var num3 = 0.10;
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## Boolean
+----
+
+* 布尔类型值是true或false。： {:&.build} 
+    ```javascript
+        // Boolean values.
+        var okay = true;
+        var fail = false;
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## null and undefined
+----
+
+* null和undefined是特殊类型的JavaScript。
+  null类型是表示值为空的，类似于许多其他编程语言的null。
+  undefined类型代表没有被分配值。这种类型以两种方式建立的：通过使用undefined关键字或根本给定值。： {:&.build} 
+    ```javascript
+        // Define a null value.
+        var foo = null;
+         
+        // Two ways to achieve an undefined value.
+        var bar1 = undefined;
+        var bar2;
+        
+    ```
+    
+    
