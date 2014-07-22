@@ -262,7 +262,7 @@ files: /js/demo.js,/css/demo.css
     ```
 
 [slide style="background-image:url('/img/bg.jpg	')"]
-##  Callbacks 
+##  Callbacks(续) 
 ----
     
 * Callback with Arguments：  {:&.build} 
@@ -273,5 +273,11 @@ files: /js/demo.js,/css/demo.css
       });
        
     ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  课后作业 
+----
+    
+* 使用jquery做出图片渐入渐出效果
 
 
