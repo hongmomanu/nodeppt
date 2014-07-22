@@ -114,7 +114,7 @@ files: /js/demo.js,/css/demo.css
            <title>Demo</title>
        </head>
        <body>
-           <a href="http://jquery.com/">jQuery</a>
+           <a href="http://jquery.com/">Hello jQuery</a>
            <script src="jquery.js"></script>
            <script>
            // 写你的代码.
@@ -195,21 +195,70 @@ files: /js/demo.js,/css/demo.css
 ##  Adding and Removing an HTML Class
 ----
     
-* 对于单击或者其它大部分事件, 你可以通过调用event.preventDefault()阻止默认的行为，如下:  {:&.build} 
-    ```javascript
+* 首先, 增加一些样式到document里的<head>标签下 , 如下:  {:&.build} 
+    ```html
     
-       $( document ).ready(function() {
+       <style>
+       a.test {
+           font-weight: bold;
+           color:red;
+       }
+       </style>
+    
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Adding and Removing an HTML Class （续）
+----
+    
+* 执行 .addClass() 以增加class:, 如下:  {:&.build} 
+    ```javascript
+       
+       $( "a" ).addClass( "test" );
+       
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Adding and Removing an HTML Class （续）
+----
+    
+* 执行 .removeClass() 以删除样式:, 如下:  {:&.build} 
+    ```javascript
+       
+       $( "a" ).removeClass( "test" );
+       
+    ```
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  特别效果 
+----
+    
+* jQuery的也提供了一些方便的效果。例如，你可以添加一个渐渐消失的效果，只需添加如下代码：  {:&.build} 
+    ```javascript
+       
+       $( "a" ).click(function( event ) {
         
-           $( "a" ).click(function( event ) {
-            
-                   alert( "正如你所见,我不将再跳往jquery首页");
-            
-                   event.preventDefault();
-            
-           });
+           event.preventDefault();
+        
+           $( this ).hide( "slow" );
         
        });
+       
+    ```
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Callbacks 
+----
     
+* Callback without Arguments：  {:&.build} 
+    ```javascript
+       
+      $.get( "www.baidu.com", function(){
+            alert(1);
+      });
+       
     ```
 
 
