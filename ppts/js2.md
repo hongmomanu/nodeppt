@@ -25,7 +25,7 @@ files: /js/demo.js,/css/demo.css
 ## 前言（续）
 ----
 
-* CSS 用来演示:
+* CSS 用来渲染:
          
     ```bash
              
@@ -33,6 +33,19 @@ files: /js/demo.js,/css/demo.css
          CSS是所有有关使内容通过定义字体，颜色和其他视觉美感更好看。 
          CSS的强大功能来自于一个事实，即你可以将不同的样式应用到同一块内容，
          构建看跨终端的良好响应的网站时，这是至关重要的。  
+                      
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 前言（续）
+----
+
+* JavaScript  用来交互:
+         
+    ```bash
+          在浏览器中，JavaScript对HTML内容增添交互性和行为。
+          没有JavaScript，网页将是静态的，枯燥的。 
+          JavaScript的帮助把一个网页变的有生命。   
                       
     ```
     
