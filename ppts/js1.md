@@ -105,8 +105,69 @@ files: /js/demo.js,/css/demo.css
 ## 用一个例子说明Jquery是如何工作的
 ----
     
-* Jquery1.x 支持ie6以上浏览器，对于旧的浏览器兼容更好。  {:&.build} 
+* 首先，引用Jquery，我们新建一个HTML 文件，如下:  {:&.build} 
+    ```html
+       <!doctype html>
+       <html>
+       <head>
+           <meta charset="utf-8" />
+           <title>Demo</title>
+       </head>
+       <body>
+           <a href="http://jquery.com/">jQuery</a>
+           <script src="jquery.js"></script>
+           <script>
+           // 写你的代码.
+           </script>
+       </body>
+       </html>
+    
+    ```
 
-* Jquery2.x 不支持ie8以下的浏览器，所以更加轻量级，对新的浏览器特性如html5特性支持更好。  
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Launching Code on Document Ready
+----
+    
+* 为了保证javascript的代码在浏览器完成加载document之后运行,
+    很多javascript开发者将他们的代码写在 onload function 里面，如下:  {:&.build} 
+    ```javascript
+    
+       window.onload = function() {
+           alert( "welcome" );
+       }
+    
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Launching Code on Document Ready （续）
+----
+    
+* 不幸的是，上面的代码，直到所有图像下载完毕，代码才运行。为了解决此问题，尽快的运行代码，jQuery用ready事件的声明：:  {:&.build} 
+    ```javascript
+    
+       $(document).ready(function() {
+           // Your code here.
+       });
+    
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  增加一个单击事件
+----
+    
+* 例如,在ready event 里面, 你可以添加一个添加一个单击事件:  {:&.build} 
+    ```javascript
+    
+       $( document ).ready(function() {
+        
+           $( "a" ).click(function( event ) {
+        
+               alert( "Thanks for visiting!" );
+        
+           });
+        
+       });
+    
+    ```
 
 
