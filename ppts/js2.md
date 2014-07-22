@@ -212,3 +212,21 @@ files: /js/demo.js,/css/demo.css
 * 只能由字母，数字，美元符号和下划线。 
 * 第一个字符不能是数字.
     
+
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 语法基础知识(续)
+----
+
+* 命名标识符的最好的方式就是让你或者其它开发者，能很快明白它的意思: {:&.build} 
+         
+    ```javascript
+        
+        // Valid identifier names.
+        var myAwesomeVariable = "a";
+        var myAwesomeVariable2 = "b";
+        var my_awesome_variable = "c";
+        var $my_AwesomeVariable = "d";
+        var _my_awesome_variable_$ = "e";
+                      
+    ```
+
