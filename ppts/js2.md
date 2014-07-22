@@ -181,6 +181,25 @@ files: /js/demo.js,/css/demo.css
           </script>
         </body>
         </html>
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 语法基础知识
+----
+
+* 空白。在JavaScript中空白也是被忽略的，通常添加空白是为了可读性。: {:&.build} 
+         
+    ```javascript
+        
+        //添加空白，较好阅读!
+        var foo = function() {
+            for ( var i = 0; i < 10; i++ ) {
+                alert( i );
+            }
+        };
+        foo();
+        // 较少空白，不好阅读!
+        var foo=function() {for(var i=0;i<10;i++){alert(i);}};foo();
                       
     ```
     
