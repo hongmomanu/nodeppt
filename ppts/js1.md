@@ -170,4 +170,46 @@ files: /js/demo.js,/css/demo.css
     
     ```
 
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  阻止跳转
+----
+    
+* 对于单击或者其它大部分事件, 你可以通过调用event.preventDefault()阻止默认的行为，如下:  {:&.build} 
+    ```javascript
+    
+       $( document ).ready(function() {
+        
+           $( "a" ).click(function( event ) {
+            
+                   alert( "正如你所见,我不将再跳往jquery首页");
+            
+                   event.preventDefault();
+            
+           });
+        
+       });
+    
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+##  Adding and Removing an HTML Class
+----
+    
+* 对于单击或者其它大部分事件, 你可以通过调用event.preventDefault()阻止默认的行为，如下:  {:&.build} 
+    ```javascript
+    
+       $( document ).ready(function() {
+        
+           $( "a" ).click(function( event ) {
+            
+                   alert( "正如你所见,我不将再跳往jquery首页");
+            
+                   event.preventDefault();
+            
+           });
+        
+       });
+    
+    ```
+
 
