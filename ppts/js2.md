@@ -505,14 +505,118 @@ files: /js/demo.js,/css/demo.css
     ```javascript
        var foo = 1;
        var bar = 0;
-       var baz = 2;
-       // returns 1, which is true
-       foo || bar;
-       // returns 1, which is true
-       bar || foo;
-       // returns 0, which is false
-       foo && bar;
+       var baz = "1";
+       var bim = 2;
+       foo == bar; // false
+       foo != bar; // true
+       foo == baz; // true; but note that the types are different
+       foo === baz;             // false
+       foo !== baz;             // true
+       foo === parseInt( baz ); // true
+       foo > bim;  // false
+       bim > baz;  // true
+       foo <= baz; // true
 
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 条件代码
+----
+
+* 逻辑运算符.逻辑运算符使用AND（&&）和OR（| |）运算。。 {:&.build} 
+    
+    ```javascript
+       var bar = false;
+        
+       if ( bar ) {
+           // This code will never run.
+           console.log( "hello true!" );
+       }else{
+           console.log( "hello false!" );
+       }
+
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 条件代码
+----
+
+* 值得真假。 {:&.build} 
+    
+    ```javascript
+       // Values that evaluate to false:
+       false
+       "" // An empty string.
+       NaN // JavaScript's "not-a-number" variable.
+       null
+       undefined // Be careful -- undefined can be redefined!
+       0 // The number zero.
+       // Everything else evaluates to true, some examples:
+       "0"
+       "any string"
+       [] // An empty array.
+       {} // An empty object.
+       1 // Any non-zero number.
+
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 条件代码
+----
+
+* 三元表达式。 {:&.build} 
+    
+    ```javascript
+       // Set foo to 1 if bar is true; otherwise, set foo to 0:
+       var bar="";
+       var foo = bar ? 1 : 0;
+       console.log(foo);
+
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 条件代码
+----
+
+* Switch 语句。 {:&.build} 
+    
+    ```javascript
+       var foo="";
+       switch ( foo ) {
+           case "bar":
+               alert( "the value was bar -- yay!" );
+               break;
+           case "baz":
+               alert( "boo baz :(" );
+               break;
+           default:
+               alert( "everything else is just ok" );
+       }
+
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 循环
+----
+
+* for 语句。 {:&.build} 
+    
+    ```javascript
+        for ( var i = 0; i < 5; i++ ) {
+            
+            console.log( "try " + i );
+        }
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 循环
+----
+
+* while 语句。 {:&.build} 
+    
+    ```javascript
+        var i = 0;
+        while ( i < 100 ) {
+            console.log( "Currently at " + i );
+            i++; 
+        }
     ```
     
     
