@@ -478,5 +478,42 @@ files: /js/demo.js,/css/demo.css
 
     ```
     
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 运算
+----
+
+* 逻辑运算符.逻辑运算符使用AND（&&）和OR（| |）运算。。 {:&.build} 
+    
+    ```javascript
+       var foo = 1;
+       var bar = 0;
+       var baz = 2;
+       // returns 1, which is true
+       foo || bar;
+       // returns 1, which is true
+       bar || foo;
+       // returns 0, which is false
+       foo && bar;
+
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 比较操作符
+----
+
+* 逻辑运算符.逻辑运算符使用AND（&&）和OR（| |）运算。。 {:&.build} 
+    
+    ```javascript
+       var foo = 1;
+       var bar = 0;
+       var baz = 2;
+       // returns 1, which is true
+       foo || bar;
+       // returns 1, which is true
+       bar || foo;
+       // returns 0, which is false
+       foo && bar;
+
+    ```
+    
     
     
