@@ -671,15 +671,61 @@ files: /js/demo.js,/css/demo.css
 ## 数组的方法和属性
 ----
 
-* .concat()。 {:&.build} 
+* .join()。 {:&.build} 
     
     ```javascript
-        var myArray = [ 2, 3, 4 ];
-        var myOtherArray = [ 5, 6, 7 ];
-        var wholeArray = myArray.concat( myOtherArray ); // [ 2, 3, 4, 5, 6, 7 ]
-        console.log(wholeArray);
+        var myArray = [ "hello", "world", "!" ];
+         
+        // The default separator is a comma.
+        console.log( myArray.join() );     // "hello,world,!"
+         
+        // Any string can be used as separator...
+        console.log( myArray.join( " " ) );  // "hello world !";
+        console.log( myArray.join( "!!" ) ); // "hello!!world!!!";
+         
+        // ...including an empty one.
+        console.log( myArray.join( "" ) );   // "helloworld!"
         
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 数组的方法和属性
+----
+
+* .join()。 {:&.build} 
+    
+    ```javascript
+        var myArray = [ "hello", "world", "!" ];
+         
+        // The default separator is a comma.
+        console.log( myArray.join() );     // "hello,world,!"
+         
+        // Any string can be used as separator...
+        console.log( myArray.join( " " ) );  // "hello world !";
+        console.log( myArray.join( "!!" ) ); // "hello!!world!!!";
+         
+        // ...including an empty one.
+        console.log( myArray.join( "" ) );   // "helloworld!"
+        
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 数组的方法和属性
+----
+
+* .reverse()。 {:&.build} 
+    
+    ```javascript
+        var myArray = [ "world" , "hello" ];
+        var newArray=myArray.reverse(); // [ "hello", "world" ]
+        console.log(newArray);
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 作业
+----
+
+* 在上一堂作业的基础上，添加渐入渐出计数器。
+    
     
     
     
