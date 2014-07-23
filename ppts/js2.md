@@ -422,7 +422,7 @@ files: /js/demo.js,/css/demo.css
 ## Function
 ----
 
-* Funcion 定义。 {:&.build} 
+* Function 定义。 {:&.build} 
     ```javascript
         var func_a=function(){
           alert("func_a")
@@ -432,6 +432,50 @@ files: /js/demo.js,/css/demo.css
           alert("func_b")
         }
         
+    ```
+    
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 运算
+----
+
+* 基本运算。 {:&.build} 
+    
+    ```javascript
+       var foo = "hello";
+       var bar = "world";
+       console.log( foo + " " + bar ); // "hello world"
+       // Multiplication and division
+       2 * 3;
+       2 / 3;
+       // Incrementing and decrementing
+       var i = 1;
+       console.log( ++i ); // 2 - because i was incremented before evaluation
+       console.log( i );   // 2
+       var i = 1;
+       console.log( i++ ); // 1 - because i was evaluated to 1 and _then_ incremented
+       console.log( i );   // 2
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 运算
+----
+
+* 对数字和字符串操作。 {:&.build} 
+    
+    ```javascript
+       // Addition vs. Concatenation
+       var foo = 1;
+       var bar = "2";
+       console.log( foo + bar ); // 12
+       
+       // Coercing a string to act as a number.
+       var foo = 1;
+       var bar = "2";
+        
+       console.log( foo + Number(bar) ); // 3
+
     ```
     
     
