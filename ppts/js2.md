@@ -619,5 +619,67 @@ files: /js/demo.js,/css/demo.css
         }
     ```
     
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 循环
+----
+
+* do-while 语句。 {:&.build} 
+    
+    ```javascript
+        do {
+            alert( "Hi there!" );
+        } while ( false );
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 循环
+----
+
+* break and continue 语句。 {:&.build} 
+    
+    ```javascript
+        for ( var i = 0; i < 10; i++ ) {
+            if ( i==5 ) {
+                break;
+            }
+            console.log(i);
+        }
+        for ( var i = 0; i < 10; i++ ) {
+            if ( i==5 ) {
+                continue;
+            }
+            console.log(i);
+        }
+        
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 数组的方法和属性
+----
+
+* .length。 {:&.build} 
+    
+    ```javascript
+        // Length of an array
+         
+        var myArray = [ "hello", "world", "!" ];
+         
+        console.log( myArray.length ); // 3
+        
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]        
+## 数组的方法和属性
+----
+
+* .concat()。 {:&.build} 
+    
+    ```javascript
+        var myArray = [ 2, 3, 4 ];
+        var myOtherArray = [ 5, 6, 7 ];
+        var wholeArray = myArray.concat( myOtherArray ); // [ 2, 3, 4, 5, 6, 7 ]
+        console.log(wholeArray);
+        
+    ```
+    
     
     
