@@ -401,3 +401,21 @@ files: /js/demo.js,/css/demo.css
        $( "ul.people li:first" ).after( myNewElement.clone() ); 
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Creating New Elements(续)  ： {:&.build} 
+         
+    ```javascript
+       
+       var myItems = [];
+       var myList = $( "ul.people" );
+        
+       for ( var i = 0; i < 100; i++ ) {
+           myItems.push( "<li>item " + i + "</li>" );
+       }
+        
+       myList.append( myItems.join( "" ) ); 
+              
+    ```
