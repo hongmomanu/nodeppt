@@ -239,11 +239,12 @@ files: /js/demo.js,/css/demo.css
        $( "form :enabled" );
                       
     ```    
+    
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## 选择元素(续)
 ----
 
-* 常用的form元素选择（续）。: {:&.build} 
+*  常用的form元素选择（续）： {:&.build} 
          
     ```javascript
         
@@ -252,7 +253,6 @@ files: /js/demo.js,/css/demo.css
        $( "form :input" );
        $( "form :password" );
        $( "form :radio" );
-       
                       
     ```    
 [slide style="background-image:url('/img/bg.jpg	')"]    
@@ -269,4 +269,87 @@ files: /js/demo.js,/css/demo.css
        $( "h1" ).html();
                       
     ```    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 使用选择（续）
+----
+
+* Chaining。如果你调用一个选择的方法，而且该方法返回一个jQuery对象，你可以继续在对象上调用jQuery方法。
+  这种做法被称为“链式操作”：: {:&.build} 
+         
+    ```javascript
+        
+       $( "body" ).find( "h1" ).eq( 0 ).html( "new text for the first h1!" );
+                      
+    ```
+* 为了增加可读性.你也可以这样写:
     
+    ```javascript
+            
+        $( "body" )
+            .find( "h1" )
+            .eq( 0 )
+            .html( "new text for the first h1!" );
+                          
+    ```    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 使用选择（续）
+----
+
+* 对于“Chaining”，jQuery的还提供了end（）方法来返回到原来的选择：: {:&.build} 
+         
+    ```javascript
+        
+       $( "body" )
+           .find( "h1" )
+           .eq( 1 )
+               .html( "new text for the third h1!" )
+               .end()
+           .eq( 0 )
+               .html( "new text for the first h1!" );
+                      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Getting and Setting Information About Elements，介绍如下： {:&.build} 
+         
+    ```javascript
+        
+       .html() – Get or set the HTML contents.
+       .text() – Get or set the text contents; HTML will be stripped.
+       .attr() – Get or set the value of the provided attribute.
+       .width() – Get or set the width in pixels of the first element in the selection as an integer.
+       .height() – Get or set the height in pixels of the first element in the selection as an integer.
+       .position() – Get an object with position information for the first element in the selection, relative to its first positioned ancestor. This is a getter only.
+       .val() – Get or set the value of form elements. $( "form :input" ).val();
+                      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Moving Elements，方法有.insertAfter(), .insertBefore(), .appendTo(), and .prependTo() ： {:&.build} 
+         
+    ```javascript
+       
+       var li = $( "ul.people li:first" ).appendTo( "ul.people" );
+        
+       // Another approach to the same problem:
+       $( "ul.people" ).append( $( "ul.people li:first" ));
+                      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Cloning Elements，方法为.clone() ： {:&.build} 
+         
+    ```javascript
+       
+       var li = $( "ul.people li:first" ).appendTo( "ul.people" );
+        
+       // Another approach to the same problem:
+       $( "ul.people" ).append( $( "ul.people li:first" ));
+                      
+    ```
