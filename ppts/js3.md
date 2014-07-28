@@ -738,4 +738,32 @@ files: /js/demo.js,/css/demo.css
      
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## ajax 
+----
+* ajax 使用 : {:&.build}
+    ```javascript
+      $.ajax({
+          url: "post.php",  // 地址
+          data: {
+              id: 123
+          },               // 提交的参数
+          type: "GET",// whether this is a POST or GET request
+          dataType : "json",  // the type of data we expect back
+          success: function( json ) {
+              console.log(json)
+          },
+          error: function( xhr, status, errorThrown ) { //error
+              alert( "Sorry, there was a problem!" );
+              console.log( "Error: " + errorThrown );
+              console.log( "Status: " + status );
+              console.dir( xhr );
+          },
+          complete: function( xhr, status ) {  // code to run regardless of success or failure
+              alert( "The request is complete!" );
+          }
+      });
+     
+              
+    ```
     
