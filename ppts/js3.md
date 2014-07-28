@@ -470,3 +470,164 @@ files: /js/demo.js,/css/demo.css
        $( "#myId" ).children();
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## css样式, Dimensions尺寸 
+----
+
+* .css()方法  ： {:&.build} 
+         
+    ```javascript
+    
+       $( "h1" ).css( "fontSize" );  //get properties
+       $( "h1" ).css( "font-size" ); // Also works.
+       $( "h1" ).css( "fontSize", "100px" ); // Setting an individual property.
+       // Setting multiple properties.
+       $( "h1" ).css({
+           fontSize: "100px",
+           color: "red"
+       });
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## css样式, Dimensions尺寸 
+----
+
+* 使用 CSS Classes for Styling  ： {:&.build} 
+         
+    ```javascript
+    
+       // Working with classes.
+        
+       var h1 = $( "h1" );
+        
+       h1.addClass( "big" );
+       h1.removeClass( "big" );
+       h1.toggleClass( "big" );
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Dimensions尺寸 
+----
+
+* 下面的代码显示了jQuery中的大小尺寸功能的简要概述。 ： {:&.build} 
+         
+    ```javascript
+    
+       // Sets the width of all <h1> elements.
+       $( "h1" ).width( "50px" );
+       // Gets the width of the first <h1> element.
+       $( "h1" ).width();
+       // Sets the height of all <h1> elements.
+       $( "h1" ).height( "50px" );
+       // Gets the height of the first <h1> element.
+       $( "h1" ).height();
+        
+       // Returns the first <h1> relative to its "offset (positioned) parent".
+       $( "h1" ).position();
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 实用方法 
+----
+
+* jQuery提供的$命名空间中几种实用方法。这些方法是用于实现常规的编程任务有帮助的。 ： {:&.build}
+ 
+* $.trim() 方法  
+         
+    ```javascript
+    
+       // Returns "lots of extra whitespace"
+       $.trim( "    lots of extra whitespace    " );
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 实用方法 
+----
+
+* $.each()方法 ： {:&.build}
+         
+    ```javascript
+    
+       $.each([ "foo", "bar", "baz" ], function( idx, val ) {
+           console.log( "element " + idx + " is " + val );
+       });
+        
+       $.each({ foo: "bar", baz: "bim" }, function( k, v ) {
+           console.log( k + " : " + v );
+       });
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 实用方法 
+----
+
+* $.inArray() ： {:&.build}
+         
+    ```javascript
+    
+       //Returns a value's index in an array, or -1 if the value is not in the array:
+       var myArray = [ 1, 2, 3, 5 ];
+       var index=$.inArray( 4, myArray ); 
+       if (index !== -1 ) {
+           console.log( "found it!index 是:" + index );
+       }
+              
+    ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 实用方法 
+----
+
+* $.extend(): {:&.build}
+         
+    ```javascript
+       
+       var firstObject = { foo: "第一个值", a: "b" };
+       var secondObject = { foo: "第二个覆盖值" };
+       //改变属性值： 
+       var newObject = $.extend( firstObject, secondObject );
+       console.log( firstObject.foo ); // "第二个覆盖值"
+       console.log( newObject.foo ); // "第二个覆盖值"
+       
+       //覆盖而不改变
+       var newObject = $.extend( {}, firstObject, secondObject );
+       console.log( firstObject.foo ); // "第一个值"
+       console.log( newObject.foo ); // "第二个覆盖值"
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 事件binding 
+----
+
+* .on(): {:&.build}
+         
+    ```javascript
+       
+       $( "p" ).on( "click", function() {
+           console.log( "click" );
+       });
+       //简写方式
+       $( "p" ).click(function() {
+           console.log( "You clicked a paragraph!" );
+       });
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 事件binding 
+----
+
+* .off(): {:&.build}
+         
+    ```javascript
+      
+      // Tearing down all click handlers on a selection
+      $( "p" ).off( "click" );
+       
+      var foo = function() { console.log( "foo" ); };
+      var bar = function() { console.log( "bar" ); };
+       
+      $( "p" ).on( "click", foo ).on( "click", bar );
+      $( "p" ).off( "click", bar ); // foo is still bound to the click event
+              
+    ```
+    
