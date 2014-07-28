@@ -37,7 +37,7 @@ files: /js/demo.js,/css/demo.css
          });
                       
     ```
-* 简写用法:  {:&.build} 
+* 简写用法:  
          
     ```javascript
              
@@ -46,6 +46,12 @@ files: /js/demo.js,/css/demo.css
          });
                       
     ```
+、    
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## $( document ).ready()写法（续）
+----
+
 * 分开命名法:  {:&.build} 
          
     ```javascript
@@ -61,16 +67,65 @@ files: /js/demo.js,/css/demo.css
     
     
 [slide style="background-image:url('/img/bg.jpg	')"]    
-## 前言（续）
+## 避免与其他库的冲突
 ----
 
-* JavaScript  用来交互:   {:&.build} 
+* 当项目中存在其它库，如prototype.js, MooTools, or YUI时，可能会发生冲突，这时候你需要启用No-Conflict 模式:   {:&.build} 
          
-    ```bash
-          在浏览器中，JavaScript对HTML内容增添交互性和行为。
-          没有JavaScript，网页将是静态的，枯燥的。 
-          JavaScript的帮助把一个网页变的有生命。   
-                      
+    ```html
+          <!-- Putting jQuery into no-conflict mode. -->
+          <script src="prototype.js"></script>
+          <script src="jquery.js"></script>
+          <script>
+          var $j = jQuery.noConflict();
+          // $j is now an alias to the jQuery function; creating the new alias is optional.
+          $j(document).ready(function() {
+              $j( "p" ).hide();
+              var mainDiv = $( "main" );
+              alert(mainDiv);
+          });
+          </script>  
+              
+    ```
+## 避免与其他库的冲突(续)
+----
+
+* 如果你不想定义另一个替代全jQuery函数的别名，你也可以这样写:   {:&.build} 
+         
+    ```html
+          <!-- Putting jQuery into no-conflict mode. -->
+          <script src="prototype.js"></script>
+          <script src="jquery.js"></script>
+          <script>
+          jQuery.noConflict();
+           
+          jQuery( document ).ready(function( $ ) {
+              
+              $( "p" ).hide();
+          });
+          
+          </script>  
+              
+    ```
+## 避免与其他库的冲突(续)
+----
+
+* 包括其他的jQuery库之前:   {:&.build} 
+         
+    ```html
+          <!-- Putting jQuery into no-conflict mode. -->
+          <script src="jquery.js"></script>
+          <script src="prototype.js"></script>
+          <script>
+          jQuery.noConflict();
+           
+          jQuery( document ).ready(function( $ ) {
+              
+              $( "p" ).hide();
+          });
+          
+          </script>  
+              
     ```
     
 [slide style="background-image:url('/img/bg.jpg	')"]    
@@ -80,18 +135,22 @@ files: /js/demo.js,/css/demo.css
 * 看一个简单的例子，看看CSS and JavaScrip是怎么一起工作的:   {:&.build} 
          
     ```html
-        <!doctype html>
-        <html lang="zh">
-        <head>
-            <meta charset="utf-8" />
-            <title>Hello World</title>
+        <!-- Putting jQuery into no-conflict mode. -->
+        <script src="prototype.js"></script>
+        <script src="jquery.js"></script>
+        <script>
+        var $j = jQuery.noConflict();
+        // $j is now an alias to the jQuery function; creating the new alias is optional.
+        $j(document).ready(function() {
+            $j( "div" ).hide();
+        });
+        // The $ variable now has the prototype meaning, which is a shortcut for
+        // document.getElementById(). mainDiv below is a DOM element, not a jQuery object.
+        window.onload = function() {
+            var mainDiv = $( "main" );
+        }
          
-            <!-- CSS for presentation. -->
-            <style>
-            h1 { font-size: 14px; color: hotpink; }
-            button { color: red; }
-            </style>
-        </head>
+        </script>
                       
     ```
     
