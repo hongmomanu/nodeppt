@@ -364,3 +364,40 @@ files: /js/demo.js,/css/demo.css
        //只想清空内容
         $( "ul.people li:first" ).empty() ;               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Creating New Elements，方法为$("...")  ： {:&.build} 
+         
+    ```javascript
+       
+       // Creating new elements from an HTML string.
+       $( "<p>This is a new paragraph</p>" );
+       $( "<li class=\"new\">new list item</li>" );
+                  
+      // Creating a new element with an attribute object.
+      $( "<a/>", {
+          html: "This is a <strong>new</strong> link",
+          "class": "new",
+          href: "foo.html"
+      });            
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Creating New Elements(续)  ： {:&.build} 
+         
+    ```javascript
+       
+       var myNewElement = $( "<li>New element</li>" );
+        
+       myNewElement.appendTo( "ul.people" );
+        
+       myNewElement.insertAfter( "ul.people li:first" ); 
+        
+       $( "ul.people li:first" ).after( myNewElement.clone() ); 
+              
+    ```
