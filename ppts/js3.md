@@ -224,3 +224,49 @@ files: /js/demo.js,/css/demo.css
        var divs = $( "div" );  
                       
     ```    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 选择元素(续)
+----
+
+* 常用的form元素选择。: {:&.build} 
+         
+    ```javascript
+        
+       $( "form :button" );
+       $( "form :checkbox" );
+       $( "form :checked" );
+       $( "form :disabled" );
+       $( "form :enabled" );
+                      
+    ```    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 选择元素(续)
+----
+
+* 常用的form元素选择（续）。: {:&.build} 
+         
+    ```javascript
+        
+       $( "form :file" );
+       $( "form :image" ); 
+       $( "form :input" );
+       $( "form :password" );
+       $( "form :radio" );
+       
+                      
+    ```    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 使用选择
+----
+
+* Getters & Setters。当一个方法被用来设置一个值，它被称为一个setter。
+   当一个方法被用来获取（或读取）的值，它被称为一个getter。setter影响选择的所有元素。getter仅获取在选择的第一要素所要求的值。 : {:&.build} 
+         
+    ```javascript
+        
+       $( "h1" ).html( "hello world" );
+       
+       $( "h1" ).html();
+                      
+    ```    
+    
