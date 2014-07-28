@@ -437,3 +437,17 @@ files: /js/demo.js,/css/demo.css
        });
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵属性
+----
+
+* Creating New Elements(续)  ： {:&.build} 
+         
+    ```javascript
+    
+        // Using a function to determine an attribute's new value.
+       $( "#myId a:first" ).attr( "href", function( idx, href ) {
+           return "http://" + href;
+       });
+              
+    ```
