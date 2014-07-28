@@ -347,9 +347,20 @@ files: /js/demo.js,/css/demo.css
          
     ```javascript
        
-       var li = $( "ul.people li:first" ).appendTo( "ul.people" );
-        
-       // Another approach to the same problem:
-       $( "ul.people" ).append( $( "ul.people li:first" ));
+       // Copy the first list item to the end of the list:
+       $( "ul.people li:first" ).clone().appendTo( "ul.people" );
                       
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵要素
+----
+
+* Removing Elements，方法为.remove() ： {:&.build} 
+         
+    ```javascript
+       
+       // Copy the first list item to the end of the list:
+       $( "ul.people li:first" ).remove() ;
+       //只想清空内容
+        $( "ul.people li:first" ).empty() ;               
     ```
