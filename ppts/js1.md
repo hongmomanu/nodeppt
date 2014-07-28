@@ -18,6 +18,19 @@ files: /js/demo.js,/css/demo.css
          “The Write Less, Do More JavaScript Library”   
                       
     ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## Jquery历史
+----
+
+* jQuery在2006年1月由美国人John Resig在纽约的barcamp发布，吸引了来自世界各地的众多JavaScript程序员加入，由Dave Methvin率领团队进行开发。 {:&.build} 
+
+* jQuery是免费、开源的，使用MIT许可协议。
+
+* 除此以外，jQuery提供API让开发者编写插件。其模块化的使用方式使开发者可以很轻松的开发出功能强大的静态或动态网页。
+
+* 如今，jQuery已经成为最流行的javascript框架，在世界前10000个访问最多的网站中，有超过55%在使用jQuery.
     
 [slide style="background-image:url('/img/bg.jpg	')"]
 ## 什么是Jquery
@@ -54,6 +67,67 @@ files: /js/demo.js,/css/demo.css
     * [未解压缩uncompressed 下载](http://code.jquery.com/jquery-1.11.1.js)
     
     * [压缩minified 下载](http://code.jquery.com/jquery-1.11.1.min.js)
+
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 利用网络CDN公共库
+----
+
+* 为什么？: {:&.build} 
+    
+    * 较少本地应用服务器的压力  {:&.build} 
+    
+    * 最大的优点是许多用户在访问其他站点时，已经从谷歌或微软加载过 jQuery。
+      所以结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。
+      同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。
+    
+   
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 利用网络CDN公共库（续）
+----
+
+* 下面就介绍几个相对来说比较稳定的CDN公共库: {:&.build} 
+    
+    * [Google CDN](http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js)  {:&.build} 
+        ```html
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        
+        ```
+    * [Microsoft CDN](http://ajax.microsoft.com/ajax/jquery/jquery-1.7.min.js)  
+        ```html
+            <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.7.min.js"></script>
+      
+        ```
+    
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 利用网络CDN公共库（续）
+----
+
+* CDN公共库(续): {:&.build} 
+    
+    * [百度 CDN](http://libs.baidu.com/jquery/1.7.0/jquery.min.js) 
+        ```html
+            <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.0/jquery.min.js"></script>
+          
+        ```
+    * [新浪 CDN](http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js)
+        ```html
+              <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>
+        ```    
+   
+[slide style="background-image:url('/img/bg.jpg	')"]
+## 利用网络CDN公共库（续）
+----
+
+* 以防万一，当无法从CDN服务器上获取jQuery时，则使用本地jQuery: {:&.build} 
+    
+    ```html
+        <script type="text/javascript">window.jQuery||document.write('<script src="jquery.js"><\/script>');</script>
+      
+    ```
+    
+
+
 
 
 [slide style="background-image:url('/img/bg.jpg	')"]
@@ -279,5 +353,9 @@ files: /js/demo.js,/css/demo.css
 ----
     
 * 使用jquery做出图片渐入渐出效果
+
+* 演示一下
+
+* 邮箱地址 hongmomanu@163.com
 
 
