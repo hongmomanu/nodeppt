@@ -630,4 +630,112 @@ files: /js/demo.js,/css/demo.css
       $( "p" ).off( "click", bar ); // foo is still bound to the click event
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Event Helpers 
+----
+
+* .hover(): {:&.build}
+         
+    ```javascript
+      
+      // The hover helper function
+      $( "li" ).hover(function() {
+          $( this ).toggleClass( "hover" );
+      });
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Event Helpers 
+----
+
+* .toggle(): {:&.build}
+         
+    ```javascript
+      
+      $( "p" ).toggle( function() {
+          $( this ).addClass( "hover" );
+      }, function() {
+          $( this ).removeClass( "hover" );
+      });
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Effects 效果 
+----
+
+* .hdie() .show(): {:&.build}
+         
+    ```javascript
+      
+      $( "p" ).hide("slow");
+      $( "p" ).hide(3000);
+      $( "p" ).show("slow");
+      $( "p" ).show(3000);
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Effects 效果 
+----
+
+* .slideUp() .slideDown(): {:&.build}
+         
+    ```javascript
+      
+      $( "p" ).slideUp( 1000 );
+      $( "p" ).slideUp("slow");
+       
+      $( "p" ).slideDown( 1000 );
+      $( "p" ).slideDown( "fast" );
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Effects 效果 
+----
+
+* .fadeOut() .fadeIn(): {:&.build}
+         
+    ```javascript
+      
+      $( "p" ).fadeOut( 1000 );
+      $( "p" ).fadeOut("slow");
+       
+      $( "p" ).fadeIn( 1000 );
+      $( "p" ).fadeIn( "fast" );
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Effects 效果 
+----
+
+* .toggle() .slideToggle() .fadeToggle(): {:&.build}
+         
+    ```javascript
+      
+      $( "p" ).toggle( 1000 );
+      $( "p" ).slideToggle("slow");
+       
+      $( "p" ).fadeToggle( 1000 );
+     
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## Effects 效果 
+----
+
+* .animate() : {:&.build}
+         
+    ```javascript
+      
+      $( "div.funtimes" ).animate({
+              left: "+=500",
+              opacity: 0.7
+          },
+          300, // Duration
+          function() { // Callback when the animation is finished
+              console.log( "done!" );
+          }
+      );
+     
+              
+    ```
     
