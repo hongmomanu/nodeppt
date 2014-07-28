@@ -761,7 +761,7 @@ files: /js/demo.js,/css/demo.css
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## 作业 
 ----
-*  在上次作业的基础上，完成四角迷踪步效果:  {:&.build}
+*  在上次作业的基础上，完成迷踪步效果:  {:&.build}
 
 *  演示如下
     
