@@ -212,3 +212,15 @@ files: /js/demo.js,/css/demo.css
        }     
                       
     ```    
+
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 选择元素(续)
+----
+
+* 重复利用.jQuery的不缓存你的元素。如果你做了一次选择，你可能需要再次需要选择，你应该保存选择的变量，而不是重复地做选择。: {:&.build} 
+         
+    ```javascript
+        
+       var divs = $( "div" );  
+                      
+    ```    
