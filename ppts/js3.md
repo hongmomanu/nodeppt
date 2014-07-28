@@ -419,3 +419,21 @@ files: /js/demo.js,/css/demo.css
        myList.append( myItems.join( "" ) ); 
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 操纵属性
+----
+
+* Creating New Elements(续)  ： {:&.build} 
+         
+    ```javascript
+       
+       // Manipulating a single attribute.
+       $( "#myId a:first" ).attr( "href", "http://cn.bing.com/" );
+       
+       //操作多个属性
+       $( "#myId a:first" ).attr({
+           href: "http://cn.bing.com/",
+           title: "松石间意"
+       });
+              
+    ```
