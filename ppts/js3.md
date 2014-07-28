@@ -451,3 +451,22 @@ files: /js/demo.js,/css/demo.css
        });
               
     ```
+
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## child and parent 
+----
+
+* .parent()  ： {:&.build} 
+         
+    ```javascript
+    
+       $( "#myId a:first" ).parent();
+              
+    ```
+* .children()  
+         
+    ```javascript
+    
+       $( "#myId" ).children();
+              
+    ```
