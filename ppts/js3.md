@@ -177,41 +177,38 @@ files: /js/demo.js,/css/demo.css
 ## 选择元素(续)
 ----
 
-* Selecting Elements by Attribute: {:&.build} 
+* 判断是否找到元素，如果你做了一个选择,你想知道是否找到了元素.一个常见的错误是: {:&.build} 
          
     ```javascript
         
-        $( "div[name='div_name']");
-                      
-    ```
-* Selecting Elements by Compound CSS Selector: {:&.build} 
-         
-    ```javascript
+        // Doesn't work!
+        if ( $( "div.foo" ) ) {
         
-       $( "#myId ul.people li" ); 
+            console.log("存在");
+            
+        }else{
+        
+            console.log("不存在");
+        }  
                       
     ```
-    
+
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## 选择元素(续)
 ----
 
-* 其它一些选择例子。: {:&.build} 
+* 正确的用法是: {:&.build} 
          
     ```javascript
         
-        $( "a.external:first" );
-        $( "a:odd" );
-         
-        // Select all input-like elements in a form (more on this below).
-        $( "#myForm :input" );
-        $( "div:visible" );
-         
-        // All except the first three divs.
-        $( "div:gt(0)" );
-         
-        // All currently animated divs.
-        $( "div:animated" );
+       if (  $( "div.foo" ).length  ) {
+       
+           console.log("存在");
+           
+       }else{
+       
+           console.log("不存在");
+           
+       }     
                       
-    ```
-    
+    ```    
