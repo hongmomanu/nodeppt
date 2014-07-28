@@ -703,11 +703,12 @@ files: /js/demo.js,/css/demo.css
       $( "p" ).fadeIn( "fast" );
               
     ```
+    
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## Effects 效果 
 ----
 
-* .toggle() .slideToggle() .fadeToggle(): {:&.build}
+* .toggle() .slideToggle() .fadeToggle():  {:&.build}
          
     ```javascript
       
@@ -715,14 +716,13 @@ files: /js/demo.js,/css/demo.css
       $( "p" ).slideToggle("slow");
        
       $( "p" ).fadeToggle( 1000 );
-     
               
     ```
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## Effects 效果 
 ----
 
-* .animate() : {:&.build}
+* .animate():  {:&.build}
          
     ```javascript
       
@@ -735,19 +735,15 @@ files: /js/demo.js,/css/demo.css
               console.log( "done!" );
           }
       );
-     
               
     ```
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## ajax 
 ----
-* ajax 使用 : {:&.build}
-    ```javascript
+```javascript
       $.ajax({
           url: "post.php",  // 地址
-          data: {
-              id: 123
-          },               // 提交的参数
+          data: {name: 123},               // 提交的参数
           type: "GET",// whether this is a POST or GET request
           dataType : "json",  // the type of data we expect back
           success: function( json ) {
@@ -755,15 +751,17 @@ files: /js/demo.js,/css/demo.css
           },
           error: function( xhr, status, errorThrown ) { //error
               alert( "Sorry, there was a problem!" );
-              console.log( "Error: " + errorThrown );
-              console.log( "Status: " + status );
-              console.dir( xhr );
           },
           complete: function( xhr, status ) {  // code to run regardless of success or failure
               alert( "The request is complete!" );
           }
       });
-     
-              
-    ```
+      
+```
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 作业 
+----
+*  在上次作业的基础上，完成四角迷踪步效果:  {:&.build}
+
+*  演示如下
     
