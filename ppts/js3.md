@@ -761,7 +761,7 @@ files: /js/demo.js,/css/demo.css
 [slide style="background-image:url('/img/bg.jpg	')"]    
 ## 作业 
 ----
-*  在上次作业的基础上，完成凌波微步效果:  {:&.build}
+*  在上次作业的基础上，添加凌波微步效果:  {:&.build}
 
 *  演示如下
     

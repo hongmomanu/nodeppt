@@ -1,0 +1,203 @@
+title: 前端语法学习之jQuery Easyui框架介绍
+speaker: Jack
+url: https://github.com/hongmomanu
+transition: cards
+files: /js/demo.js,/css/demo.css
+
+[slide style="background-image:url('/img/bg.jpg	')"]
+
+## 什么是jQuery EasyUI
+----
+
+* jQuery EasyUI是一组基于jQuery的UI插件集合。 {:&.build} 
+    
+
+* jQuery EasyUI的目标就是帮助web开发者更轻松的打造出功能丰富并且外观统一的UI界面
+         
+* jQuery EasyUI为我们提供了大多数常用UI控件的使用，如：accordion，combobox，menu，dialog，tabs，validatebox，datagrid，window，tree等等。
+
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 使用jQuery EasyUI
+----
+
+* [官方下载最新版本1.3.6](http://www.jeasyui.com/download/index.php):  {:&.build} 
+         
+* 引入文件:  
+         
+    ```html
+             
+         <link rel="stylesheet" type="text/css" href="easyui1.3.6/themes/bootstrap/easyui.css">
+         <script type="text/javascript" src="jquery-1.11.1.js"></script>
+         <script type="text/javascript" src="easyui1.3.6/jquery.easyui.min.js"></script>
+         <script type="text/javascript" src="easyui1.3.6/locale/easyui-lang-zh_CN.js"></script>
+                      
+    ```
+、    
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## hello world
+----
+
+* 引入上述文件后，添加如下标签:  {:&.build} 
+         
+    ```html
+         <a href="#" class="easyui-linkbutton" >Hello world!</a>
+    ```
+    
+    
+    
+[slide style="background-image:url('/img/bg.jpg	')"]    
+## 另一种写法
+----
+
+* 根据id，动态生成:   {:&.build} 
+         
+    ```javascript
+          
+          $('#btn2').linkbutton();  
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## 添加一个事件
+----
+
+* 两种方式，自带onClick，jquery binding:   {:&.build} 
+         
+    ```javascript
+        
+       $('#btn2').linkbutton({
+         onClick:function(){
+            alert("自带")
+         }
+       });       
+       
+       $('#btn2').bind('click',function(){alert('binding')});
+              
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Panel.标签方式:   {:&.build} 
+         
+    ```html
+        
+       <div id="p" class="easyui-panel" title="My Panel" 
+               style="width:500px;height:150px;padding:10px;background:#fafafa;"
+               data-options="iconCls:'icon-save',closable:true,
+                       collapsible:true,minimizable:true,maximizable:true">
+           <p>panel content.</p>
+           <p>panel content.</p>
+       </div>
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Panel.代码生成:   {:&.build} 
+         
+    ```javascript
+        
+      $('#panel').panel({
+          width:500,
+          height:150,
+          title:'My Panel',
+          tools:[{
+              iconCls:'icon-add',
+              handler:function(){alert('new')}
+          },{
+              iconCls:'icon-save',
+              handler:function(){alert('save')}
+          }]
+      }); 
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Tabs.标签引入:   {:&.build} 
+         
+    ```html
+        
+      <div id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+          <div title="Tab1" style="padding:20px;display:none;">
+              tab1
+          </div>
+          <div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">
+              tab2
+          </div>
+          <div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="padding:20px;display:none;">
+              tab3
+          </div>
+      </div> 
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Tabs.代码生成:   {:&.build} 
+         
+    ```javascript
+      $('#tt').tabs({
+          border:false,
+          onSelect:function(title){
+              alert(title+' is selected');
+          }
+      });
+      $('#tt').tabs('add',{
+          title:'新标签1',
+          content:'新标签一内容',
+          closable:true
+      }); 
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Accordion.标签引入:   {:&.build} 
+         
+    ```html
+        
+      <div id="aa" class="easyui-accordion" style="width:300px;height:200px;">
+          <div title="Title1" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;">
+              <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+              <p>Accordion is a part of easyui framework for jQuery. 
+              It lets you define your accordion component on web page more easily.</p>
+          </div>
+          <div title="Title2" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">
+              content2
+          </div>
+          <div title="Title3">
+              content3
+          </div>
+      </div>
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* Accordion.代码动态生成:   {:&.build} 
+    ```javascript
+      $('#aa').accordion({
+          width:200,
+          height:200
+      });
+      $('#aa').accordion('add', {
+          title: 'New Title1',
+          content: 'New Content1',
+          selected: true
+      });
+      $('#aa').accordion('add', {
+          title: 'New Title2',
+          content: 'New Content2',
+          selected: false
+      });
+              
+    ```
+    
