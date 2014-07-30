@@ -493,4 +493,12 @@ files: /js/demo.js,/css/demo.css
        });
       
     ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## 作业
+----
+
+* 在上次作业的基础上添加踪迹记录写入到datagrid中:   {:&.build} 
+
+* 演示如下
+    
     
