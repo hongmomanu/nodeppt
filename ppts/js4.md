@@ -200,4 +200,40 @@ files: /js/demo.js,/css/demo.css
       });
               
     ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* layout.标签引入:   {:&.build} 
+    ```html
+      
+      <div id="cc" class="easyui-layout" style="width:600px;height:400px;">
+          <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>
+          <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+          <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+          <div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+          <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+      </div>
+              
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Layout 布局
+----
+
+* layout.代码动态生成:   {:&.build} 
+    ```javascript
+    
+      $('#cc').layout({fit:true});
+      $('#cc').layout('add',{
+          region: 'west',
+          width: 180,
+          title: 'West Title',
+          split: true
+      });
+      $('#cc').layout('add',{
+          region: 'center',
+          title: 'Center Title'
+      });
+      
+    ```
     
