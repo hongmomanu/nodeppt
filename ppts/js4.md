@@ -262,6 +262,7 @@ files: /js/demo.js,/css/demo.css
 
 * form表单提交:   {:&.build} 
     ```javascript
+       
        $('#ff').form({
            url:'test',
            onSubmit: function(){
@@ -274,7 +275,6 @@ files: /js/demo.js,/css/demo.css
        });
        // submit the form
        $('#ff').submit();
-      
       
     ```
 [slide style="background-image:url('/img/bg.jpg	')"] 
@@ -299,3 +299,64 @@ files: /js/demo.js,/css/demo.css
        $('#ff').form('clear');
       
     ```
+
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* window.标签引用:   {:&.build} 
+    ```html
+       <div id="win" class="easyui-window" title="My Window" style="width:600px;height:400px"
+               data-options="iconCls:'icon-save',modal:true">
+           Window Content
+       </div>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* window.代码生成:   {:&.build} 
+    ```javascript
+       $('#win').window({
+           width:200,
+           height:100,
+           modal:true
+       });
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* dialog.标签引入:   {:&.build} 
+    ```html
+       <div id="dd" class="easyui-dialog" title="My Dialog" style="width:400px;height:200px;"
+               data-options="iconCls:'icon-save',resizable:true,modal:true">
+           Dialog Content.
+       </div>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* dialog.代码生成:   {:&.build} 
+    ```javascript
+       $('#dd').dialog({
+           title: 'My Dialog',
+           width: 400,
+           height: 200,
+           closed: false,
+           buttons:[{
+               text:'保存',
+               handler:function(){alert(1);}
+           },{
+               text:'关闭',
+               handler:function(){$('#dd').dialog('close');}
+           }],
+           modal: true
+       });
+      
+    ```
+    
