@@ -236,4 +236,66 @@ files: /js/demo.js,/css/demo.css
       });
       
     ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Form 表单
+----
+
+* form表单引入:   {:&.build} 
+    ```html
     
+      <form id="ff"  method="post">
+          <div>
+              <label for="name">Name:</label>
+              <input class="easyui-validatebox" type="text" name="name" data-options="required:true" />
+          </div>
+          <div>
+              <label for="email">Email:</label>
+              <input class="easyui-validatebox" type="text" name="email" data-options="validType:'email'" />
+          </div>
+          ...
+      </form>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Form 表单
+----
+
+* form表单提交:   {:&.build} 
+    ```javascript
+       $('#ff').form({
+           url:'test',
+           onSubmit: function(){
+               // do some check
+               // return false to prevent submit;
+           },
+           success:function(data){
+               alert("测试")
+           }
+       });
+       // submit the form
+       $('#ff').submit();
+      
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Form 表单
+----
+
+* form表单load数据:   {:&.build} 
+    ```javascript
+       $('#ff').form('load',{
+       	name:'name2',
+       	email:'mymail@gmail.com'
+       	
+       });
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Form 表单
+----
+
+* form表单清空数据:   {:&.build} 
+    ```javascript
+       $('#ff').form('clear');
+      
+    ```
