@@ -359,4 +359,98 @@ files: /js/demo.js,/css/demo.css
        });
       
     ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* messager.alert:   {:&.build} 
+    ```javascript
+       
+       $.messager.alert('Warning','The warning message');
+      
+    ```
+
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## Window 窗体
+----
+
+* messager.confirm:   {:&.build} 
+    ```javascript
+       
+       $.messager.confirm('Confirm','Are you sure you want to delete record?',function(r){
+           if (r){
+               alert('ok');
+           }
+       });
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* DataGrid.标签引入:   {:&.build} 
+    ```html
+       
+       <table class="easyui-datagrid" style="width:400px;height:250px"
+               data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
+           <thead>
+               <tr>
+                   <th data-options="field:'code',width:100">Code</th>
+                   <th data-options="field:'name',width:100">Name</th>
+                   <th data-options="field:'price',width:100,align:'right'">Price</th>
+               </tr>
+           </thead>
+       </table>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* DataGrid.代码生成:   {:&.build} 
+    ```javascript
+       
+       $('#dg').datagrid({
+           url:'datagrid_data.json',
+           columns:[[
+               {field:'code',title:'Code',width:100},
+               {field:'name',title:'Name',width:100},
+               {field:'price',title:'Price',width:100,align:'right'}
+           ]]
+       });
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* tree.标签引入:   {:&.build} 
+    ```html
+       <ul id="tt" class="easyui-tree">
+           <li>
+               <span>Folder</span>
+               <ul>
+                   <li>
+                       <span>Sub Folder 1</span>
+                       <ul>
+                           <li><span><a href="#">File 11</a></span></li>
+                       </ul>
+                   </li>
+                   <li><span>File 2</span></li>
+               </ul>
+           </li>
+       </ul>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* tree.代码生成:   {:&.build} 
+    ```javascript
+       $('#tt').tree({
+           url:'tree_data.json'
+       });
+      
+    ```
     
