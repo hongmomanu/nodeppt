@@ -453,4 +453,44 @@ files: /js/demo.js,/css/demo.css
        });
       
     ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* treegrid.标签引入:   {:&.build} 
+    ```html
+       
+       <table id="tt" class="easyui-treegrid" style="width:600px;height:400px"
+               data-options="url:'treegrid_data.json',idField:'id',treeField:'name'">
+           <thead>
+               <tr>
+                   <th data-options="field:'name',width:180">Task Name</th>
+                   <th data-options="field:'persons',width:60,align:'right'">Persons</th>
+                   <th data-options="field:'begin',width:80">Begin Date</th>
+                   <th data-options="field:'end',width:80">End Date</th>
+               </tr>
+           </thead>
+       </table>
+      
+    ```
+[slide style="background-image:url('/img/bg.jpg	')"] 
+## DataGrid and Tree 数据表格和树
+----
+
+* treegrid.代码生成:   {:&.build} 
+    ```javascript
+       
+       $('#tt').treegrid({
+           url:'treegrid_data.json',
+           idField:'id',
+           treeField:'name',
+           columns:[[
+               {title:'Task Name',field:'name',width:180},
+               {field:'persons',title:'Persons',width:60,align:'right'},
+               {field:'begin',title:'Begin Date',width:80},
+               {field:'end',title:'End Date',width:80}
+           ]]
+       });
+      
+    ```
     
